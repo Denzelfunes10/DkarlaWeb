@@ -1,0 +1,617 @@
+/* ------------Nomalized ------------ */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box
+}
+
+/* ------------ Fonts ------------ */
+
+@font-face {
+    font-family: "TheWanters";
+    src: url(../assets/fonts/The\ Wanters\ DEMO.ttf);    
+}
+@font-face{
+    font-family: "FreeStyle-Script";
+    src: url(../assets/fonts/FREESCPT.TTF);
+}
+@font-face {
+    font-family: 'LexendDeca';
+    src: url(../assets/fonts/LexendDeca-Thin.ttf);
+}
+@font-face {
+    font-family: 'LexendDeca-SemiBold';
+    src: url(../assets/fonts/LexendDeca-SemiBold.ttf);
+}
+@font-face {
+    font-family: 'LexendDeca-Light';
+    src: url(../assets/fonts/LexendDeca-Light.ttf);
+}
+
+/* ------------ General features texts ------------ */
+
+h1{
+    font-family: "TheWanters";
+    font-size: 50px;
+    color: black;
+    padding: 10px;
+    
+    background-image: url(../assets/img/fondoPapel.png);
+    background-size: cover;
+    background-position: top;
+    filter: drop-shadow(-6px 6px 4px);
+}
+
+h2{
+    font-family: "FreeStyle-Script";
+    font-size: 80px;
+    color: #60605F;
+}
+
+h3{
+    font-family: "FreeStyle-Script";
+    font-size: 60px;
+    text-align: center;
+    color: #fff;
+}
+
+p{
+    font-family: 'LexendDeca-Light', sans-serif;
+    text-align: justify;
+    font-size: 20px;
+}
+
+figcaption{
+    font-family: 'LexendDeca-Light';
+    text-align: center;
+    font-size: 25px;
+    color: black;
+    padding: 10px;
+    
+
+    background-image: url(../assets/img/fondoPapel.png);
+    background-position: top;
+    filter: drop-shadow(-6px 6px 4px);
+}
+
+/* ------------ Headers ------------ */
+
+header{
+    display: flex;
+    height: 250px;
+    justify-content: space-between;
+}
+
+.logo img{
+    margin-top: 10px;
+    margin-left: 10px;
+    height: 100%;
+    filter: drop-shadow(-12px 9px 6px);
+}
+
+.navBar{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    right: 0px;
+    height: 100px;
+
+    background-image: url(../assets/img/FondoNav.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: drop-shadow(-12px 9px 6px);
+}
+
+.navBar li {
+    list-style: none;
+    padding: 50px 0px 10px 40px;
+}
+
+.navBar li a {
+    text-decoration: none;
+    font-family: "TheWanters";
+    font-size: 30px;
+    color: #fff;
+    filter: drop-shadow(-2px 4px 1px black);
+}
+
+.cart a img{
+    position: relative;
+    height: 40px;
+    margin-top: -1px;
+    margin-right: 40px;
+}
+
+/* ------------ Footers ------------ */
+
+footer{
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 100%;
+    height: 300px;
+    
+    background-image: url(../assets/img/suelo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.redes{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.redes div a img{
+    width: 200px;
+}
+
+/* ------------ animaciones ------------ */
+
+@keyframes jello-vertical {
+    0% {
+        transform: scale3d(1, 1, 1);
+    }
+    30% {
+        transform: scale3d(0.75, 1.25, 1);
+    }
+    40% {
+        transform: scale3d(1.25, 0.75, 1);
+    }
+    50% {
+        transform: scale3d(0.85, 1.15, 1);
+    }
+    65% {
+        transform: scale3d(1.05, 0.95, 1);
+    }
+    75% {
+        transform: scale3d(0.95, 1.05, 1);
+    }
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
+}
+.navBar li a:hover{
+    color: #60605F;
+    font-size: 35px;
+    transition: transform .3s, .8s;
+}
+.navBar li:nth-child(2) a:hover{
+    color: #F4B911;
+}
+.navBar li:nth-child(3) a:hover{
+    color: #15A015;
+}
+.navBar li:nth-child(4) a:hover{
+    color: #F25814;
+}
+.producto div:hover {
+    cursor: pointer;
+    animation: jello-vertical 1s both;
+}
+button:hover{
+	animation: jello-vertical 1s both;
+}
+
+/* ------------------------ Main Index ------------------------ */
+
+.bodyMain{
+    background-image: url(../assets/img/ladrillos.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.mainIndex{
+    display: grid;
+    height: 100%;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 80px 500px 300px 100px 300px;
+    grid-template-areas: 
+    ". . item1 . ."
+    "item2 item2 item2 item2 item2"
+    "item3 item3 item3 item3 item3"
+    ". . item5 item5 item5"
+    "item4 item4 item6 item6 item6"
+    "item4 item4 item6 item6 item6"
+    ;
+}
+
+.news{
+    grid-area: item1;
+    text-align: center;
+}
+
+.carruselImg{
+    grid-area: item2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 30px;
+}
+
+.sticker{
+    grid-area: item3;
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 150px;
+}
+
+.sticker img{
+    width: 275px;
+}
+
+.botes{
+    grid-area: item4;
+    display: flex;
+    justify-content: center;
+    align-content: flex-end;
+    height: 275px;
+
+    position: relative;
+    z-index: 1;
+    top: 200px;
+    left: 10px;
+}
+
+.offer{
+    grid-area: item5;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+
+    font-family: "theWanters";
+    font-size: 50px;
+    color: #0e0e0e;
+
+    background-image: url(../assets/img/fondoPapel.png);
+    background-size: cover;
+    background-position: top;
+    filter: drop-shadow(-6px 6px 4px);
+}
+
+.ofertas{
+    grid-area: item6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+}
+
+.ofertas figure img{
+    height: 200px;
+    border-radius: 15px;
+}
+
+/* ------------------------ Main pages ------------------------ */
+
+/* ------------ General features pages------------ */
+
+.bodySub{
+    background-image: url(../assets/img/fondoVegetal.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.ventaCe section h3{
+    background-color: #F4B911;
+}
+
+.ventaCe section div{
+    background-color: #F4B911;
+}
+
+.ventaCh section h3{
+    background-color: #15A015;
+}
+
+.ventaCh section div{
+    background-color: #15A015;
+}
+
+.ventaEs section h3{
+    background-color: #F25814;
+}
+
+.ventaEs section div{
+    background-color: #F25814;
+}
+
+/* ------------ grid main ------------ */
+
+.mainPage{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 2fr 1fr 400px;
+    grid-template-areas: 
+    ". portada portada ."
+    ". . info info"
+    "bote bote venta venta"
+    ;
+}
+
+.portada{
+    grid-area: portada;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #F7F4EB;
+    background-size: contain;
+    padding: 40px;
+}
+
+.textoPortada{
+    width: 500px;
+}
+
+.stickerPortada{
+    width: 300px;
+}
+
+.info{
+    grid-area: info;
+
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+
+    row-gap: 20px;
+    padding-top: 50px;
+    padding-right: 30px;
+}
+
+.ventaCe{
+    grid-area: venta;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.ventaCh{
+    grid-area: venta;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.ventaEs{
+    grid-area: venta;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.botesCe{
+    grid-area: bote;
+
+    display: flex;
+    justify-content: center;
+    align-content: flex-end;
+    height: 600px;
+
+    position: relative;
+    z-index: 1;
+    top: 100px;
+    left: 10px;
+}
+
+.botesCh{
+    grid-area: bote;
+
+    display: flex;
+    justify-content: center;
+    align-content: flex-end;
+    height: 600px;
+
+    position: relative;
+    z-index: 1;
+    top: 100px;
+    left: 10px;
+}
+
+.botesEs{
+    grid-area: bote;
+
+    display: flex;
+    justify-content: center;
+    align-content: flex-end;
+    height: 600px;
+
+    position: relative;
+    z-index: 1;
+    top: 100px;
+    left: 10px;
+}
+
+/* ------------ grid productos ------------ */
+
+.producto{
+    display: grid;
+    grid-template-columns: repeat(2, 100px);
+    grid-template-rows: 200px 10px 50px 5px 50px;
+    grid-template-areas: 
+    "bote bote"
+    ". ."
+    "onz price"
+    ". ."
+    "cart cart"
+    ;
+}
+
+.producto figure img{
+    grid-area: bote;
+    width: 200px;
+    border-radius: 15px;
+}
+
+.producto h3{
+    grid-area: onz;
+
+    font-family: 'LexendDeca-Light';
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.producto p{
+    grid-area: price;
+    background-color: #60605F;
+
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    font-family: 'LexendDeca-Light';
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+.producto div{
+    grid-area: cart;
+
+    display: flex;
+    justify-content: center;
+
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.producto div img{
+    width: 45px;
+}
+
+/* ------------------------ Main Contactos ------------------------ */
+
+.contactMain{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+    "img1 form img2"
+    "img1 form img2"
+    "img1 form img2"
+    ;
+}
+
+.imgDecoration{
+    grid-area: img1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgDecoration2{
+    grid-area: img2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contactForm{
+    grid-area: form;
+    width: 500px; 
+    height: auto;
+    margin: auto;
+    border-radius: 10px;
+    padding: 30px;
+    background-color: #fff;  
+}
+
+.contactForm h1{
+    color: #F4B911;
+    background: none;
+    filter: none;
+    padding-left: 0px;
+    padding-bottom: 20px;
+}
+
+input{
+    background-color: #fbfbfb; 
+    width: 440px; 
+    height: 40px; 
+    border-radius: 5px;  
+    border-style: solid; 
+    border-top: 1px; 
+    border-color: #F4B911;
+    padding-left: 10px; 
+    margin-top: 10px;
+    margin-bottom: 20px; 
+}
+
+textarea{
+    background-color: #fbfbfb; 
+    width: 440px; 
+    height: 150px; 
+    border-radius: 5px;  
+    border-style: solid; 
+    border-top: 1px; 
+    border-color: #F4B911; 
+    padding-top: 15px; 
+    padding-left: 10px;
+    margin-bottom: 20px; 
+    margin-top: 10px;
+    
+}
+
+button{
+    height: 45px;
+    width: 440px;  
+    padding-left: 5px;
+    padding-right: 5px;   
+    margin-bottom: 20px; 
+    margin-top: 10px;   
+    background-color: #0e0e0e; 
+    border-color: #0e0e0e; 
+    border-style: solid; 
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button p{
+    color: #F4B911; 
+    text-align: center;
+}
+
+span{
+    color: #F4B911; 
+}
+
+.aviso{
+    font-size: 15px;  
+    color: #0e0e0e;  
+}
+
+.contactFooter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 30px;
+}
+
+div img{
+    width: 300px;
+}
+
+.contatcFormH2{
+    font-family: "LexendDeca-Light";
+    font-size: 20px;
+    color: black;
+    padding-bottom: 20px;
+}
+
