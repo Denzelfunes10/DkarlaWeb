@@ -207,7 +207,7 @@ button:hover{
     display: grid;
     height: 100%;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 80px 500px 300px 100px 300px;
+    grid-template-rows: 80px 450px 300px 100px 300px;
     grid-template-areas: 
     ". . item1 . ."
     "item2 item2 item2 item2 item2"
@@ -226,19 +226,26 @@ button:hover{
 .carruselImg{
     grid-area: item2;
     display: flex;
-    align-items: center;
     justify-content: center;
-    column-gap: 30px;
+    align-items: center;
+    column-gap: 40px;
+}
+
+.carruselImg figure img{
+    height: 250px;
+    width: 300px;
 }
 
 .sticker{
     grid-area: item3;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding-inline: 150px;
 }
 
 .sticker img{
+    height: fit-content;
     width: 275px;
 }
 
@@ -252,7 +259,7 @@ button:hover{
     position: relative;
     z-index: 1;
     top: 200px;
-    left: 10px;
+    left: 20px;
 }
 
 .offer{
@@ -280,7 +287,7 @@ button:hover{
 }
 
 .ofertas figure img{
-    height: 200px;
+    height: 175px;
     border-radius: 15px;
 }
 
@@ -615,3 +622,71 @@ div img{
     padding-bottom: 20px;
 }
 
+/* ------------------------ CSS para Tablets ------------------------ */
+
+@media (max-width: 1200px){
+
+    h1{
+        font-size: 40px;
+    }
+    h2{
+        font-size: 60px;
+    }
+    h3{
+        font-size: 45px;
+    }
+    p{
+        font-size: 15px;
+    }
+    figcaption{
+        font-size: 20px;
+    }
+
+    /* ----- header ----- */
+    
+    .logo img{
+        height: 75%;
+    }
+
+    .navBar li a {
+        font-size: 25px;
+    }
+
+    .cart a img{
+        height: 30px;
+    }
+
+    /* ----- main ----- */
+
+    .mainIndex{
+        grid-template-rows: 60px 350px 250px 90px 200px;
+    }
+    
+    .carruselImg figure img{
+        height: 200px;
+        width: 250px;
+    }
+    .sticker{
+        padding-inline: 100px;
+    }
+    .sticker img{
+        width: 200px;
+    }
+    .botes{
+        height: 225px;
+        top: 150px;
+    }
+
+    /* ----- footer ----- */
+
+    footer{
+        height: 200px;
+    }
+    .redes div a img{
+        width: 150px;
+    }
+
+    .ofertas figure img{
+        height: 125px;
+    }
+}
