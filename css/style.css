@@ -42,31 +42,28 @@ h1{
     background-position: top;
     filter: drop-shadow(-6px 6px 4px);
 }
-
 h2{
     font-family: "FreeStyle-Script";
     font-size: 80px;
     color: #60605F;
 }
-
 h3{
     font-family: "FreeStyle-Script";
     font-size: 60px;
     text-align: center;
     color: #fff;
 }
-
 p{
     font-family: 'LexendDeca-Light', sans-serif;
     text-align: justify;
     font-size: 20px;
 }
-
 figcaption{
     font-family: 'LexendDeca-Light';
     text-align: center;
     font-size: 25px;
     color: black;
+    margin-top: 20px;
     padding: 10px;
     
 
@@ -82,14 +79,12 @@ header{
     height: 300px;
     justify-content: space-between;
 }
-
 .logo img{
     margin-top: 10px;
     margin-left: 10px;
     height: 280px;
     filter: drop-shadow(-12px 9px 6px);
 }
-
 .navBar{
     display: flex;
     position: absolute;
@@ -102,12 +97,10 @@ header{
     background-repeat: no-repeat;
     filter: drop-shadow(-12px 9px 6px);
 }
-
 .navBar li {
     list-style: none;
     padding: 50px 0px 10px 40px;
 }
-
 .navBar li a {
     text-decoration: none;
     font-family: "TheWanters";
@@ -115,7 +108,6 @@ header{
     color: #fff;
     filter: drop-shadow(-2px 4px 1px black);
 }
-
 .cart a img{
     position: relative;
     height: 40px;
@@ -137,13 +129,11 @@ footer{
     background-size: cover;
     background-repeat: no-repeat;
 }
-
 .redes{
     display: flex;
     flex-direction: column;
     padding: 10px;
 }
-
 .redes div a img{
     width: 200px;
 }
@@ -202,7 +192,6 @@ button:hover{
     background-repeat: no-repeat;
     background-size: cover;
 }
-
 .mainIndex{
     display: grid;
     height: 100%;
@@ -216,12 +205,10 @@ button:hover{
     "item4 item4 item6 item6 item6"
     ;
 }
-
 .news{
     grid-area: item1;
     text-align: center;
 }
-
 .carruselImg{
     grid-area: item2;
     display: flex;
@@ -229,12 +216,24 @@ button:hover{
     align-items: center;
     column-gap: 40px;
 }
-
-.carruselImg figure img{
+.pic0{
     height: 250px;
-    width: 300px;
+    width: 250px;
+    filter: blur(2px);
+    border-radius: 25px;
 }
-
+.pic1{
+    height: 300px;
+    width: 500px;
+    box-shadow: 0px 10px 6px 1px black;
+    border-radius: 10px;
+}
+.pic2{
+    height: 250px;
+    width: 250px;
+    filter: blur(2px);
+    border-radius: 25px;
+}
 .sticker{
     grid-area: item3;
     display: flex;
@@ -242,11 +241,9 @@ button:hover{
     align-items: center;
     padding-inline: 150px;
 }
-
 .sticker img{
     width: 300px;
 }
-
 .botes{
     grid-area: item4;
     display: flex;
@@ -257,11 +254,9 @@ button:hover{
     top: 250px;
     left: 20px;
 }
-
 .botes img{
     width: 100%;
 }
-
 .offer{
     grid-area: item5;
     display: flex;
@@ -277,7 +272,6 @@ button:hover{
     background-position: top;
     filter: drop-shadow(-6px 6px 4px);
 }
-
 .ofertas{
     grid-area: item6;
     display: flex;
@@ -285,7 +279,6 @@ button:hover{
     justify-content: center;
     column-gap: 20px;
 }
-
 .ofertas figure img{
     padding: 10px;
     max-height: 300px;
@@ -302,27 +295,21 @@ button:hover{
     background-repeat: no-repeat;
     background-size: cover;
 }
-
 .ventaCe section h3{
     background-color: #F4B911;
 }
-
 .ventaCe section div{
     background-color: #F4B911;
 }
-
 .ventaCh section h3{
     background-color: #15A015;
 }
-
 .ventaCh section div{
     background-color: #15A015;
 }
-
 .ventaEs section h3{
     background-color: #F25814;
 }
-
 .ventaEs section div{
     background-color: #F25814;
 }
@@ -339,7 +326,6 @@ button:hover{
     "bote bote venta venta"
     ;
 }
-
 .portada{
     grid-area: portada;
 
@@ -352,15 +338,12 @@ button:hover{
     background-size: contain;
     padding: 40px;
 }
-
 .textoPortada{
     width: 500px;
 }
-
 .stickerPortada{
     width: 300px;
 }
-
 .info{
     grid-area: info;
 
@@ -372,7 +355,6 @@ button:hover{
     padding-top: 50px;
     padding-right: 30px;
 }
-
 .ventaCe{
     grid-area: venta;
 
@@ -381,7 +363,6 @@ button:hover{
     align-items: center;
     column-gap: 20px;
 }
-
 .ventaCh{
     grid-area: venta;
 
@@ -390,7 +371,6 @@ button:hover{
     align-items: center;
     column-gap: 20px;
 }
-
 .ventaEs{
     grid-area: venta;
 
@@ -399,7 +379,6 @@ button:hover{
     align-items: center;
     column-gap: 20px;
 }
-
 .botesCe{
     grid-area: bote;
 
@@ -413,7 +392,6 @@ button:hover{
     top: 100px;
     left: 10px;
 }
-
 .botesCh{
     grid-area: bote;
 
@@ -427,7 +405,6 @@ button:hover{
     top: 100px;
     left: 10px;
 }
-
 .botesEs{
     grid-area: bote;
 
@@ -456,13 +433,11 @@ button:hover{
     "cart cart"
     ;
 }
-
 .producto figure img{
     grid-area: bote;
     width: 200px;
     border-radius: 15px;
 }
-
 .producto h3{
     grid-area: onz;
 
@@ -474,7 +449,6 @@ button:hover{
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
 }
-
 .producto p{
     grid-area: price;
     background-color: #60605F;
@@ -488,7 +462,6 @@ button:hover{
     text-align: center;
     padding: 10px;
 }
-
 .producto div{
     grid-area: cart;
 
@@ -498,7 +471,6 @@ button:hover{
     border-radius: 5px;
     padding: 5px;
 }
-
 .producto div img{
     width: 45px;
 }
@@ -515,7 +487,6 @@ button:hover{
     "img1 form img2"
     ;
 }
-
 .imgDecoration{
     grid-area: img1;
     display: flex;
@@ -523,7 +494,6 @@ button:hover{
     align-items: center;
     justify-content: center;
 }
-
 .imgDecoration2{
     grid-area: img2;
     display: flex;
@@ -531,7 +501,6 @@ button:hover{
     align-items: center;
     justify-content: center;
 }
-
 .contactForm{
     grid-area: form;
     width: 500px; 
@@ -541,7 +510,6 @@ button:hover{
     padding: 30px;
     background-color: #fff;  
 }
-
 .contactForm h1{
     color: #F4B911;
     background: none;
@@ -549,7 +517,6 @@ button:hover{
     padding-left: 0px;
     padding-bottom: 20px;
 }
-
 input{
     background-color: #fbfbfb; 
     width: 440px; 
@@ -562,7 +529,6 @@ input{
     margin-top: 10px;
     margin-bottom: 20px; 
 }
-
 textarea{
     background-color: #fbfbfb; 
     width: 440px; 
@@ -577,7 +543,6 @@ textarea{
     margin-top: 10px;
     
 }
-
 button{
     height: 45px;
     width: 440px;  
@@ -591,32 +556,26 @@ button{
     border-radius: 10px;
     cursor: pointer;
 }
-
 button p{
     color: #F4B911; 
     text-align: center;
 }
-
 span{
     color: #F4B911; 
 }
-
 .aviso{
     font-size: 15px;  
     color: #0e0e0e;  
 }
-
 .contactFooter{
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-left: 30px;
 }
-
 div img{
     width: 300px;
 }
-
 .contatcFormH2{
     font-family: "LexendDeca-Light";
     font-size: 20px;
@@ -663,11 +622,25 @@ div img{
     .mainIndex{
         grid-template-rows: 60px 350px 250px 90px 200px;
     }
-    
-    .carruselImg figure img{
+    .pic0{
         height: 200px;
-        width: 250px;
+        width: 200px;
+        filter: blur(2px);
+        border-radius: 25px;
     }
+    .pic1{
+        height: 250px;
+        width: 450px;
+        box-shadow: 0px 10px 6px 1px black;
+        border-radius: 10px;
+    }
+    .pic2{
+        height: 200px;
+        width: 200px;
+        filter: blur(2px);
+        border-radius: 25px;
+    }
+
     .sticker{
         padding-inline: 100px;
     }
@@ -692,9 +665,9 @@ div img{
     }
 }
 
-/* ----------------- Pantallas de 760px a 1023px ----------------- */
+/* ----------------- Pantallas de 768px a 1024px ----------------- */
 
-@media (max-width: 1023px){
+@media (max-width: 1024px){
 
     h1{
         padding: 5px;
@@ -717,20 +690,16 @@ div img{
     header{
         height: 250px;
     }
-
     .logo img{
         margin-top: 120px;
         height: 200px;
     }
-
     .navBar li {
         padding: 45px 0px 10px 40px;
     }
-
     .navBar li a {
         font-size: 20px;
     }
-
     .cart a img{
         height: 25px;
     }
@@ -748,10 +717,23 @@ div img{
         ". item4 item4 item4 ."
         ;
     }
-    
-    .carruselImg figure img{
+    .pic0{
         height: 150px;
-        width: 200px;
+        width: 150px;
+        filter: blur(2px);
+        border-radius: 25px;
+    }
+    .pic1{
+        height: 200px;
+        width: 300px;
+        box-shadow: 0px 10px 6px 1px black;
+        border-radius: 10px;
+    }
+    .pic2{
+        height: 150px;
+        width: 150px;
+        filter: blur(2px);
+        border-radius: 25px;
     }
     .sticker{
         padding-inline: 50px;
