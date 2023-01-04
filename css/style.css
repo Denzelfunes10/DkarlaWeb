@@ -3,7 +3,7 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing:border-box
+    box-sizing: border-box;
 }
 
 /* ------------ Fonts ------------ */
@@ -74,45 +74,28 @@ figcaption{
 
 /* ------------ Headers ------------ */
 
-header{
-    display: flex;
-    height: 300px;
-    justify-content: space-between;
-}
 .logo img{
     margin-top: 10px;
     margin-left: 10px;
-    height: 280px;
+    height: 350px;
     filter: drop-shadow(-12px 9px 6px);
 }
-.navBar{
-    display: flex;
-    position: absolute;
-    justify-content: center;
-    right: 0px;
-    height: 100px;
-
+.bg {
     background-image: url(../assets/img/FondoNav.png);
-    background-size: cover;
+    background-size: 100% 150px;
     background-repeat: no-repeat;
-    filter: drop-shadow(-12px 9px 6px);
+    filter: drop-shadow(-12px 9px 6px); 
 }
-.navBar li {
+.nav-item {
     list-style: none;
-    padding: 50px 0px 10px 40px;
+    padding: 35px 0px 0px 10px;
 }
-.navBar li a {
+.nav-item a {
     text-decoration: none;
     font-family: "TheWanters";
-    font-size: 30px;
+    font-size: 40px;
     color: #fff;
     filter: drop-shadow(-2px 4px 1px black);
-}
-.cart a img{
-    position: relative;
-    height: 40px;
-    margin-top: -1px;
-    margin-right: 40px;
 }
 
 /* ------------ Footers ------------ */
@@ -476,7 +459,7 @@ button:hover{
 }
 
 /* ------------------------ Main Contactos ------------------------ */
-
+/*
 .contactMain{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -543,7 +526,7 @@ textarea{
     margin-top: 10px;
     
 }
-button{
+.button{
     height: 45px;
     width: 440px;  
     padding-left: 5px;
@@ -555,7 +538,7 @@ button{
     border-style: solid; 
     border-radius: 10px;
     cursor: pointer;
-}
+} 
 button p{
     color: #F4B911; 
     text-align: center;
@@ -581,11 +564,11 @@ div img{
     font-size: 20px;
     color: black;
     padding-bottom: 20px;
-}
+}*/
 
 /* ----------------- Pantallas de 1024px a 1200px ----------------- */
 
-/* @media (max-width: 1200px){
+@media (max-width: 1200px){
 
     h1{
         font-size: 40px;
@@ -603,24 +586,32 @@ div img{
         font-size: 20px;
     }
 
-    ----- header -----
+    /* ----- header ----- */
     
     .logo img{
-        height: 75%;
+        height: 275px;
     }
 
-    .navBar li a {
-        font-size: 25px;
+    .nav-item {
+        padding: 25px 0px 0px 10px;
     }
 
-    .cart a img{
+    .nav-item a {
+        font-size: 30px;
+    }
+
+    .nav-item a img{
         height: 30px;
     }
 
-    ----- main -----
+    .bg {
+        background-size: 100% 125px;
+    }
 
-    .container-fluid mainIndex{
-        grid-template-rows: 60px 350px 250px 90px 200px;
+    /* ----- main ----- */
+
+    .mainIndex{
+        grid-template-rows: 70px 350px 250px 100px 200px;
     }
     .pic0{
         height: 200px;
@@ -640,7 +631,6 @@ div img{
         filter: blur(2px);
         border-radius: 25px;
     }
-
     .sticker{
         padding-inline: 100px;
     }
@@ -652,7 +642,7 @@ div img{
         top: 150px;
     }
 
-    ----- footer -----
+    /* ----- footer ----- */
 
     footer{
         height: 200px;
@@ -663,14 +653,15 @@ div img{
     .ofertas figure img{
         height: 125px;
     }
-} */
+}
 
 /* ----------------- Pantallas de 768px a 1024px ----------------- */
 
-/* @media (max-width: 1024px){
+@media (max-width: 1024px){
 
     h1{
         padding: 5px;
+        font-size: 30px;
     }
     h2{
         font-size: 40px;
@@ -685,28 +676,27 @@ div img{
         font-size: 15px;
     }
 
-    ----- header -----
+    /* ----- header ----- */
 
-    header{
-        height: 250px;
-    }
     .logo img{
-        margin-top: 120px;
         height: 200px;
     }
-    .navBar li {
-        padding: 45px 0px 10px 40px;
+    .nav-item {
+        padding: 20px 0px 0px 5px;
     }
-    .navBar li a {
-        font-size: 20px;
+    .nav-item a {
+        font-size: 25px;
     }
-    .cart a img{
+    .nav-item a img{
         height: 25px;
     }
+    .bg {
+        background-size: 100% 100px;
+    }
 
-    ----- main -----
+    /* ----- main ----- */
 
-    .container-fluid mainIndex{
+    .mainIndex{
         grid-template-rows: 50px 300px 200px 60px 200px 100px;
         grid-template-areas:
         ". . item1 . ."
@@ -743,7 +733,7 @@ div img{
     }
     .offer{
         padding: 5px;
-        font-size: 40px;
+        font-size: 35px;
     }
     .ofertas figure img{
         height: 125px;
@@ -753,7 +743,7 @@ div img{
         top: 20px;
     }
 
-    ----- footer -----
+    /* ----- footer ----- */
 
     footer{
         justify-content: center;
@@ -764,4 +754,4 @@ div img{
         width: 125px;
     }
     
-}*/
+}

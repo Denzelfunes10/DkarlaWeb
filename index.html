@@ -15,36 +15,46 @@
 
 <body class="bodyMain">
     <!-- ENCABEZADO DE PAGINA -->
-    <header>
-        <!-- LOGO DKARLA -->
-        <section class="logo">
-            <img src="./assets/img/LogoBase.png" alt="LOGO DKARLA">
-        </section>
+    <header class="row">
+        <!-- LOGO -->
+        <div class="col-4 logo">
+            <img src="./assets/img/LogoBase.png" alt="Logo">
+        </div>
         <!-- BARRA DE NAVEGACIÓN -->
-        <nav>
-            <ul class="navBar">
-                <li>
-                    <a href="./index.html">Inicio</a>
-                </li>
-                <li>
-                    <a href="./pages/cebolla.html">La Cebolla</a>
-                </li>
-                <li>
-                    <a href="./pages/chimichurri.html">El Chimichurri</a>
-                </li>
-                <li>
-                    <a href="./pages/escabeche.html">El Escabeche</a>
-                </li>
-                <li>
-                    <a href="./pages/contactos.html">Contactos</a>
-                </li>
-                <!-- SIMBOLO DE SHOPPING CART PARA AÑADIR A FUTURO UNA SECCIÓN DE PEDIDOS -->
-                <li class="cart">
-                    <a href=""><img src="./assets/img/cart.png" alt="carrito de compras"></a>
-                </li>
-            </ul>
-        </nav>
+        <div class="col-8 d-flex justify-content-center align-items-start bg">
+            
+            <nav class="navbar navbar-expand-md">
 
+                <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Cebolla</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Chimichurri</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">Escabeche</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"><img src="./assets/img/cart.png" alt="carrito de compras"></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
     </header>
     <!-- CUERPO DE PAGINA -->
     <main class="mainIndex">
@@ -103,7 +113,7 @@
             </div>
         </section>
     </footer>
-    
+
     <!-- Script de bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
