@@ -585,7 +585,7 @@ div img{
 
 /* ----------------- Pantallas de 1024px a 1200px ----------------- */
 
-@media (max-width: 1200px){
+/* @media (max-width: 1200px){
 
     h1{
         font-size: 40px;
@@ -603,7 +603,7 @@ div img{
         font-size: 20px;
     }
 
-    /* ----- header ----- */
+    ----- header -----
     
     .logo img{
         height: 75%;
@@ -617,9 +617,9 @@ div img{
         height: 30px;
     }
 
-    /* ----- main ----- */
+    ----- main -----
 
-    .mainIndex{
+    .container-fluid mainIndex{
         grid-template-rows: 60px 350px 250px 90px 200px;
     }
     .pic0{
@@ -652,7 +652,7 @@ div img{
         top: 150px;
     }
 
-    /* ----- footer ----- */
+    ----- footer -----
 
     footer{
         height: 200px;
@@ -663,11 +663,11 @@ div img{
     .ofertas figure img{
         height: 125px;
     }
-}
+} */
 
 /* ----------------- Pantallas de 768px a 1024px ----------------- */
 
-@media (max-width: 1024px){
+/* @media (max-width: 1024px){
 
     h1{
         padding: 5px;
@@ -685,7 +685,7 @@ div img{
         font-size: 15px;
     }
 
-    /* ----- header ----- */
+    ----- header -----
 
     header{
         height: 250px;
@@ -704,9 +704,9 @@ div img{
         height: 25px;
     }
 
-    /* ----- main ----- */
+    ----- main -----
 
-    .mainIndex{
+    .container-fluid mainIndex{
         grid-template-rows: 50px 300px 200px 60px 200px 100px;
         grid-template-areas:
         ". . item1 . ."
@@ -753,7 +753,7 @@ div img{
         top: 20px;
     }
 
-    /* ----- footer ----- */
+    ----- footer -----
 
     footer{
         justify-content: center;
@@ -764,4 +764,4 @@ div img{
         width: 125px;
     }
     
-}
+}*/
