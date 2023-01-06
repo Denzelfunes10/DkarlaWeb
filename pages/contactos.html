@@ -7,39 +7,55 @@
     <!-- Cambiamos nombre de página e icono de pagina-->
     <title>Contactos | D'karla</title> 
     <link rel="shortcut icon" href="../assets/img/logoPrincipal.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body class="bodyMain">
     <!-- ENCABEZADO DE PAGINA -->
-    <header>
-        <!-- LOGO DKARLA -->
-        <section class="logo">
-            <img src="../assets/img/LogoBase.png" alt="LOGO DKARLA">
-        </section>
-        <!-- BARRA DE NAVEGACION -->
-        <nav>
-            <ul class="navBar">
-                <li class="navBar__home">
-                    <a href="../index.html">Inicio</a>
-                </li>
-                <li class="navBar__ce">
-                    <a href="./cebolla.html">La Cebolla</a>
-                </li>
-                <li class="navBar__ch">
-                    <a href="./chimichurri.html">El Chimichurri</a>
-                </li>
-                <li class="navBar__es">
-                    <a href="./escabeche.html">El Escabeche</a>
-                </li>
-                <li class="navBar__co">
-                    <a href="./contactos.html">Contactos</a>
-                </li>
-                <li class="cart">
-                    <a href=""><img height="60px" src="../assets/img/cart.png" alt="carrito de compras"></a>
-                </li>
-            </ul>
-        </nav>
+    <header class="container-fluid d-flex justify-content-between p-0">
+
+        <!-- LOGO -->
+        <div class="logo">
+            <img src="../assets/img/LogoBase.png" alt="Logo">
+        </div>
+        <!-- BARRA DE NAVEGACIÓN -->
+        
+        <div class="divNav">
+            
+            <nav class="navbar navbar-expand-md NB">
+                
+                <button class="navbar-toggler NavButton" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="lines"><img src="./assets/img/MenuHamburguesa.png" alt=""></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 navBar">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./cebolla.html">Cebolla</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./chimichurri.html">Chimichurri</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./escabeche.html">Escabeche</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contactos.html">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><img src="../assets/img/cart.png" alt="carrito de compras"></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
     </header>
     <!-- CUERPO DE PAGINA -->
     <main class="contactMain">
@@ -102,6 +118,13 @@
             </div>
         </section>
     </footer>
-    
+
+    <!-- Script de bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+        integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+        crossorigin="anonymous"></script>
 </body>
 </html>

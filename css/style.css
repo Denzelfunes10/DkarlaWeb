@@ -83,6 +83,7 @@ filter: drop-shadow(-6px 6px 4px);
     color: #0e0e0e;
 }
 .divNav {
+    padding-inline: 10px;
     background-image: url(../assets/img/FondoNav.png);
     background-size: 100% 150px;
     background-repeat: no-repeat;
@@ -107,11 +108,10 @@ filter: drop-shadow(-6px 6px 4px);
 
 footer{
     display: flex;
-    position: relative;
     justify-content: flex-end;
     align-items: flex-end;
-    width: 100%;
     height: 300px;
+    width: 100% !important;
     
     background-image: url(../assets/img/suelo.png);
     background-size: cover;
@@ -332,6 +332,7 @@ button:hover{
     justify-content: center;
     align-items: center;
     column-gap: 20px;
+    padding-inline: 5px;
 }
 .ventaCh{
     grid-area: venta;
@@ -340,6 +341,7 @@ button:hover{
     justify-content: center;
     align-items: center;
     column-gap: 20px;
+    padding-inline: 5px;
 }
 .ventaEs{
     grid-area: venta;
@@ -348,6 +350,7 @@ button:hover{
     justify-content: center;
     align-items: center;
     column-gap: 20px;
+    padding-inline: 5px;
 }
 .botesCe{
     grid-area: bote;
@@ -360,7 +363,7 @@ button:hover{
     position: relative;
     z-index: 1;
     top: 100px;
-    left: 10px;
+
 }
 .botesCh{
     grid-area: bote;
@@ -373,7 +376,6 @@ button:hover{
     position: relative;
     z-index: 1;
     top: 100px;
-    left: 10px;
 }
 .botesEs{
     grid-area: bote;
@@ -386,14 +388,13 @@ button:hover{
     position: relative;
     z-index: 1;
     top: 100px;
-    left: 10px;
 }
 
 /* ------------ grid productos ------------ */
 
 .producto{
     display: grid;
-    grid-template-columns: repeat(2, 100px);
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 200px 10px 50px 5px 50px;
     grid-template-areas: 
     "bote bote"
@@ -403,34 +404,45 @@ button:hover{
     "cart cart"
     ;
 }
-.producto figure img{
+.producto figure{
     grid-area: bote;
-    width: 200px;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+.producto figure img{
+    width: 100%;
     border-radius: 15px;
 }
 .producto h3{
     grid-area: onz;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
     font-family: 'LexendDeca-Light';
     font-size: 20px;
-    text-align: center;
-    padding: 10px;
 
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
 }
 .producto p{
     grid-area: price;
-    background-color: #60605F;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #60605F;
+    height: 100%;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
 
     font-family: 'LexendDeca-Light';
     font-size: 20px;
     color: #fff;
-    text-align: center;
-    padding: 10px;
 }
 .producto div{
     grid-area: cart;
@@ -562,19 +574,20 @@ div img{
     }
     h2{
         font-size: 60px;
+        padding-left: 10px;
     }
     h3{
         font-size: 45px;
         margin: 0;
     }
     p{
-        font-size: 15px;
+        font-size: 20px;
     }
     figcaption{
         font-size: 20px;
     }
 
-    /* ----- header ----- */
+    /* ----- headers ----- */
     
     .logo img{
         height: 275px;
@@ -592,7 +605,15 @@ div img{
         background-size: 100% 125px;
     }
 
-    /* ----- main ----- */
+    /* ----- footers ----- */
+
+    footer{
+        height: 200px;
+    }
+    .redes div a img{
+        width: 150px;
+    }
+    /* ---------- main Index ---------- */
 
     .mainIndex{
         grid-template-rows: 70px 400px 250px 90px 300px;
@@ -618,13 +639,51 @@ div img{
         top: 225px;
     }
 
-    /* ----- footer ----- */
+    /* ---------- Main pages ---------- */
 
-    footer{
-        height: 200px;
+    /* ----- grid main ----- */
+
+    .mainPage{
+        grid-template-rows: 700px 1fr 400px;
     }
-    .redes div a img{
-        width: 150px;
+    .textoPortada{
+        width: 400px;
+    }
+    .stickerPortada{
+        width: 250px;
+    }
+    .ventaCe{
+        column-gap: 10px;
+    }
+    .ventaCh{
+        column-gap: 10px;
+    }
+    .ventaEs{
+        column-gap: 10px;
+    }
+    .botesCe{
+        height: 500px;
+        top: 70px;
+    }
+    .botesCh{
+        height: 500px;
+        top: 100px;
+    }
+    .botesEs{
+        height: 500px;
+        top: 100px;
+    }
+
+    /* ----- grid productos ----- */
+
+    .producto figure img{
+        max-height: 200px;
+    }
+    .producto h3{
+        font-size: 20px;
+    }
+    .producto p{
+        font-size: 20px;
     }
 }
 
@@ -823,7 +882,7 @@ div img{
         height: 150px;
     }
     .redes div a img{
-        width: 90px;
+        width: 75px;
     }
     
 }
