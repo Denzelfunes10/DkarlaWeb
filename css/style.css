@@ -32,20 +32,21 @@
 /* ------------ General features texts ------------ */
 
 h1{
-font-family: "TheWanters";
-font-size: 50px;
-color: black;
-padding: 10px;
+    font-family: "TheWanters";
+    font-size: 50px;
+    color: black;
+    padding: 10px;
 
-background-image: url(../assets/img/fondoPapel.png);
-background-size: cover;
-background-position: top;
-filter: drop-shadow(-6px 6px 4px);
+    background-image: url(../assets/img/fondoPapel.png);
+    background-size: cover;
+    background-position: top;
+    filter: drop-shadow(-6px 6px 4px);
 }
 h2{
-font-family: "FreeStyle-Script";
-font-size: 80px;
-color: #60605F;
+    font-family: "FreeStyle-Script";
+    font-size: 80px;
+    color: #60605F;
+    margin-bottom: 0px;
 }
 h3{
 font-family: "FreeStyle-Script";
@@ -57,6 +58,7 @@ p{
 font-family: 'LexendDeca-Light', sans-serif;
 text-align: justify;
 font-size: 20px;
+margin-bottom: 0px;
 }
 figcaption{
 font-family: 'LexendDeca-Light';
@@ -412,6 +414,7 @@ button:hover{
 }
 .producto figure img{
     width: 100%;
+    max-height: 190px;
     border-radius: 15px;
 }
 .producto h3{
@@ -565,7 +568,7 @@ div img{
     padding-bottom: 20px;
 }*/
 
-/* ----------------- Pantallas de 1024px a 1200px ----------------- */
+/* ----------------- Pantallas de 1024px a 1400px ----------------- */
 
 @media (max-width: 1400px){
 
@@ -702,13 +705,13 @@ div img{
         font-size: 35px;
     }
     p{
-        font-size: 10px;
+        font-size: 15px;
     }
     figcaption{
         font-size: 15px;
     }
 
-    /* ----- header ----- */
+    /* ----- headers ----- */
 
     .logo img{
         height: 200px;
@@ -724,6 +727,17 @@ div img{
     }
     .divNav {
         background-size: 100% 100px;
+    }
+
+    /* ----- footers ----- */
+
+    footer{
+        justify-content: center;
+        align-items: flex-end;
+        height: 250px;
+    }
+    .redes div a img{
+        width: 125px;
     }
 
     /* ----- main ----- */
@@ -757,18 +771,59 @@ div img{
         top: 20px;
     }
 
-    /* ----- footer ----- */
+    /* ---------- Main pages ---------- */
 
-    footer{
-        justify-content: center;
-        align-items: flex-end;
-        height: 250px;
+    /* ----- grid main ----- */
+
+    .mainPage{
+        grid-template-rows: 600px 1fr 300px 300px;
+        grid-template-areas: 
+    ". portada portada ."
+    ". info info ."
+    ". venta venta ."
+    ". bote bote ."
+    ;
     }
-    .redes div a img{
-        width: 125px;
+    .textoPortada{
+        width: 300px;
     }
+    .stickerPortada{
+        width: 200px;
+    }
+    .info{
+        padding-right: 0;
+    }
+    .botesCe{
+        height: 400px;
+    }
+    .botesCh{
+        height: 400px;
+        top: 80px;
+    }
+    .botesEs{
+        height: 400px;
+        top: 70px;
+    }
+
+    /* ----- grid productos ----- */
     
+    .producto{
+        grid-template-rows: 150px 10px 40px 5px 40px;
+    }
+    .producto figure img{
+        max-height: 150px;
+    }
+    .producto h3{
+        font-size: 15px;
+    }
+    .producto p{
+        font-size: 15px;
+    }
+    .producto div img{
+        width: 35px;
+    }
 }
+
 /* ----------------- Pantallas de 320px a 768px ----------------- */
 
 @media (max-width: 768px){
@@ -778,7 +833,7 @@ div img{
         font-size: 20px;
     }
     h2{
-        font-size: 20px;
+        font-size: 25px;
     }
     h3{
         font-size: 25px;
@@ -791,7 +846,7 @@ div img{
         padding: 5px;
     }
 
-    /* ----- header ----- */
+    /* ----- headers ----- */
 
     .logo img{
         margin: 5px;
@@ -837,7 +892,16 @@ div img{
         color: #F25814;
     }
     
-    /* ----- main ----- */
+    /* ----- footers ----- */
+
+    footer{
+        height: 150px;
+    }
+    .redes div a img{
+        width: 75px;
+    }
+
+    /* ----- main Index ----- */
 
     .mainIndex{
         grid-template-rows: 40px 250px 125px 60px 200px 100px;
@@ -875,14 +939,69 @@ div img{
         min-width: 270px;
         top: 5px;
     }
-
-    /* ----- footer ----- */
-
-    footer{
-        height: 150px;
-    }
-    .redes div a img{
-        width: 75px;
-    }
     
+    /* ---------- Main pages ---------- */
+
+    /* ----- grid main ----- */
+
+    .mainPage{
+        grid-template-columns: 1fr 2fr 2fr 1fr;
+        grid-template-rows: 400px 1fr 250px 150px;
+        grid-template-areas: 
+    ". portada portada ."
+    ". info info ."
+    "venta venta venta venta"
+    ". bote bote ."
+    ;
+    }
+    .textoPortada{
+        width: 200px;
+    }
+    .stickerPortada{
+        width: 100px;
+    }
+    .info{
+        padding-top: 30px;
+        row-gap: 10px;
+        padding-right: 0;
+    }
+    .ventaCe{
+        padding-inline: 10px;
+    }
+    .ventaCh{
+        padding-inline: 10px;
+    }
+    .ventaEs{
+        padding-inline: 10px;
+    }
+    .botesCe{
+        height: 250px;
+        top: 0;
+    }
+    .botesCh{
+        height: 250px;
+        top: 0;
+    }
+    .botesEs{
+        height: 240px;
+        top: 0;
+    }
+
+    /* ----- grid productos ----- */
+    
+    .producto{
+        grid-template-rows: 125px 5px 30px 5px 30px;
+    }
+    .producto figure img{
+        max-height: 125px;
+    }
+    .producto h3{
+        font-size: 10px;
+    }
+    .producto p{
+        font-size: 10px;
+    }
+    .producto div img{
+        width: 25px;
+    }
 }
