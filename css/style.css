@@ -461,7 +461,7 @@ button:hover{
 }
 
 /* ------------------------ Main Contactos ------------------------ */
-/*
+
 .contactMain{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -478,19 +478,24 @@ button:hover{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-inline: 20px;
 }
-.imgDecoration2{
+.imgDecoration1{
     grid-area: img2;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-inline: 20px;
 }
 .contactForm{
     grid-area: form;
-    width: 500px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; 
     height: auto;
-    margin: auto;
+    margin-top: 10px;
     border-radius: 10px;
     padding: 30px;
     background-color: #fff;  
@@ -500,11 +505,16 @@ button:hover{
     background: none;
     filter: none;
     padding-left: 0px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
+}
+.contactForm form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 input{
     background-color: #fbfbfb; 
-    width: 440px; 
+    width: 450px;
     height: 40px; 
     border-radius: 5px;  
     border-style: solid; 
@@ -528,9 +538,9 @@ textarea{
     margin-top: 10px;
     
 }
-.button{
+.buttonSend{
     height: 45px;
-    width: 440px;  
+    width: 450px;  
     padding-left: 5px;
     padding-right: 5px;   
     margin-bottom: 20px; 
@@ -541,11 +551,11 @@ textarea{
     border-radius: 10px;
     cursor: pointer;
 } 
-button p{
+.buttonSend p{
     color: #F4B911; 
     text-align: center;
 }
-span{
+.obligatorio{
     color: #F4B911; 
 }
 .aviso{
@@ -556,17 +566,25 @@ span{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-left: 30px;
+    justify-content: end;
 }
-div img{
-    width: 300px;
+.imgDecoration img{
+    width: 100%;
+    max-width: 300px;
+    min-width: 190px;
+}
+.imgDecoration1 img{
+    width: 100%;
+    max-width: 300px;
+    min-width: 190px;
 }
 .contatcFormH2{
     font-family: "LexendDeca-Light";
+    text-align: center;
     font-size: 20px;
     color: black;
     padding-bottom: 20px;
-}*/
+}
 
 /* ----------------- Pantallas de 1024px a 1400px ----------------- */
 
@@ -688,6 +706,22 @@ div img{
     .producto p{
         font-size: 20px;
     }
+
+    /* ---------- Main Contactos ---------- */
+
+    input{
+        width: 350px;
+        height: 40px; 
+    }
+    .buttonSend{
+        width: 350px;  
+    } 
+    textarea{
+        width: 350px; 
+    }
+    .contatcFormH2{
+        font-size: 20px;
+    }
 }
 
 /* ----------------- Pantallas de 768px a 1024px ----------------- */
@@ -714,7 +748,7 @@ div img{
     /* ----- headers ----- */
 
     .logo img{
-        height: 200px;
+        height: 185px;
     }
     .nav-item {
         padding: 25px 0px 0px 5px;
@@ -822,11 +856,36 @@ div img{
     .producto div img{
         width: 35px;
     }
+
+    /* ---------- Main Contactos ---------- */
+    
+    .contactForm{
+        padding: 20px; 
+    }
+    .imgDecoration{
+        padding-inline: 10px;
+    }
+    .imgDecoration1{
+        padding-inline: 10px;
+    }
+    .buttonSend{
+        width: 275px;  
+    } 
+    input{
+        width: 275px;
+        height: 40px; 
+    }
+    textarea{
+        width: 275px; 
+    }
+    .contatcFormH2{
+        font-size: 15px;
+    }
 }
 
 /* ----------------- Pantallas de 320px a 768px ----------------- */
 
-@media (max-width: 768px){
+@media (max-width: 767px){
 
     h1{
         padding: 5px;
@@ -896,6 +955,7 @@ div img{
 
     footer{
         height: 150px;
+        padding: 0 !important;
     }
     .redes div a img{
         width: 75px;
@@ -918,10 +978,10 @@ div img{
         height: 150px;
     }
     .sticker{
-        padding-inline: 10px;
+        padding-inline: 5px;
     }
     .sticker img{
-        width: 95px;
+        width: 90px;
     }
     .offer{
         padding: 5px;
@@ -935,9 +995,9 @@ div img{
         max-height: 110px;
     }
     .botes{
-        height: 175px;
-        min-width: 270px;
-        top: 5px;
+        height: 150px;
+        min-width: 225px;
+        top: 25px;
     }
     
     /* ---------- Main pages ---------- */
@@ -955,7 +1015,7 @@ div img{
     ;
     }
     .textoPortada{
-        width: 200px;
+        width: 180px;
     }
     .stickerPortada{
         width: 100px;
@@ -975,33 +1035,56 @@ div img{
         padding-inline: 10px;
     }
     .botesCe{
-        height: 250px;
-        top: 0;
+        height: 225px;
+        top: 10px;
     }
     .botesCh{
-        height: 250px;
-        top: 0;
+        height: 225px;
+        top: 20px;
     }
     .botesEs{
         height: 240px;
-        top: 0;
+        top: 5px;
     }
 
     /* ----- grid productos ----- */
     
-    .producto{
-        grid-template-rows: 125px 5px 30px 5px 30px;
+    .contactMain{
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-rows: 200px 1fr 200px;
+        grid-template-areas: 
+        "img1 img1 img1"
+        ". form ."
+        "img2 img2 img2"
+        ;
     }
-    .producto figure img{
-        max-height: 125px;
+    .imgDecoration{
+        flex-direction: row;
     }
-    .producto h3{
-        font-size: 10px;
+    .imgDecoration1{
+        flex-direction: row;
     }
-    .producto p{
-        font-size: 10px;
+    .buttonSend{
+        width: 200px;  
+    } 
+    input{
+        width: 200px;
     }
-    .producto div img{
-        width: 25px;
+    textarea{
+        width: 200px; 
+    }
+    .contactForm h1{
+        font-size: 30px;
+    }
+    .contatcFormH2{
+        font-size: 15px;
+    }
+    .imgDecoration img{
+        max-width: 190px;
+        min-width: 80px;
+    }
+    .imgDecoration1 img{
+        max-width: 190px;
+        min-width: 80px;
     }
 }
