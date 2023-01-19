@@ -1,0 +1,18 @@
+@mixin flex($direction, $justify, $align){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+@mixin bg-settings($size, $repeat, $position){
+    background-size: $size;
+    background-repeat: $repeat;
+    background-position: $position;
+}
+
+@mixin font($family, $size, $color, $text){
+    font-family: $family;
+    font-size: $size;
+    color: $color;
+    text-align: $text;
+}

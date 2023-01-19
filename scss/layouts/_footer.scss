@@ -1,0 +1,21 @@
+footer{
+    @include flex(row, flex-end, flex-end);
+    height: 300px;
+    width: 100%;
+
+    background-image: url(../assets/img/suelo.png);
+    @include bg-settings(cover, no-repeat, unset);
+
+    h3{
+        @include font($subtitle, 3.75rem, #fff, center)
+    }
+
+    section{
+        flex-direction: column;
+        padding: 10px;
+        
+        div a img{
+            width: 200px;
+        }
+    }
+}
