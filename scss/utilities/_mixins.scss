@@ -1,13 +1,18 @@
-@mixin flex($direction, $justify, $align){
+@mixin flex($justify, $align){
     display: flex;
-    flex-direction: $direction;
     justify-content: $justify;
     align-items: $align;
 }
-@mixin bg-settings($size, $repeat, $position){
-    background-size: $size;
+@mixin flexColumn($justifyC, $alignC){
+    display: flex;
+    flex-direction: column;
+    justify-content: $justifyC;
+    align-items: $alignC;
+}
+@mixin bg-settings($size-bg, $repeat, $filtro){
+    background-size: $size-bg;
     background-repeat: $repeat;
-    background-position: $position;
+    filter: $filtro;
 }
 
 @mixin font($family, $size, $color, $text){

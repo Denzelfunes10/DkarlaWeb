@@ -1,0 +1,87 @@
+.bodyMain{
+    background-image: url(../assets/img/ladrillos.jpg);
+    @include bg-settings (cover, no-repeat, none);
+}
+
+.mainIndex{
+    display: grid;
+    height: 100%;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 80px 500px 300px 100px 400px;
+    grid-template-areas: 
+    ". . item1 . ."
+    ". item2 item2 item2 ."
+    "item3 item3 item3 item3 item3"
+    ". . item5 item5 item5"
+    "item4 item4 item6 item6 item6"
+    ;
+    
+    h1{
+        grid-area: item1;
+        padding: 10px;
+        @include font($title, 50px, black, center);
+        background-image: url(../assets/img/fondoPapel.png);
+        @include bg-settings(cover, no-repeat, $shadow);
+        background-position: top;
+    }
+    figcaption{
+        @include font($text, 25px, black, center);
+        margin-top: 20px;
+        padding: 10px;
+        
+        background-image: url(../assets/img/fondoPapel.png);
+        @include bg-settings(cover, no-repeat, $shadow);
+    }
+    .carruselImg{
+        grid-area: item2;
+        div img{
+            height: 400px;
+            box-shadow: 0px 10px 6px 1px black;
+            border-radius: 10px;
+        }
+    }
+    .sticker{
+        grid-area: item3;
+        @include flex(space-between, center);
+        padding-inline: 150px;
+        
+        img{
+            width: 300px;
+        }
+    }
+    .botes{
+        grid-area: item4;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+        top: 250px;
+
+        img{
+            width: 100%;
+        }
+    }
+    h2{
+        grid-area: item5;
+        @include flex(center, center);
+        padding: 20px;
+
+        @include font($title, 50px, black, center);
+
+        background-image: url(../assets/img/fondoPapel.png);
+        @include bg-settings(cover, no-repeat, $shadow);
+        background-position: top;
+    }
+    .ofertas{
+        grid-area: item6;
+        @include flex(center, center);
+        column-gap: 20px;
+
+        figure img{
+            max-height: 300px;
+            width: 100%;
+            border-radius: 15px;
+        }
+    }
+
+}

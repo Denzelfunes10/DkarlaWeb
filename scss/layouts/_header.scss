@@ -3,14 +3,13 @@ header{
         margin-top: 10px;
         margin-left: 10px;
         height: 350px;
-        filter: $sombra;
+        filter: $shadow;
     }
 
     .divNav{
         padding-inline: 10px;
         background-image: url(../assets/img/FondoNav.png);
-        @include bg-settings(100% 150px, no-repeat, unset);
-        filter: $sombra;
+        @include bg-settings(100% 150px, no-repeat, $shadow);
 
         .nav-item{
             list-style: none;

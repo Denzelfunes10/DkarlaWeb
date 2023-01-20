@@ -34,7 +34,6 @@ header .divNav {
   background-image: url(../assets/img/FondoNav.png);
   background-size: 100% 150px;
   background-repeat: no-repeat;
-  background-position: unset;
   filter: drop-shadow(-12px 9px 6px black); }
   header .divNav .nav-item {
     list-style: none;
@@ -47,9 +46,92 @@ header .divNav {
       text-align: center;
       filter: drop-shadow(-2px 4px 1px black); }
 
+.bodyMain {
+  background-image: url(../assets/img/ladrillos.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: none; }
+
+.mainIndex {
+  display: grid;
+  height: 100%;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 80px 500px 300px 100px 400px;
+  grid-template-areas: ". . item1 . ." ". item2 item2 item2 ." "item3 item3 item3 item3 item3" ". . item5 item5 item5" "item4 item4 item6 item6 item6"; }
+  .mainIndex h1 {
+    grid-area: item1;
+    padding: 10px;
+    font-family: "theWanters";
+    font-size: 50px;
+    color: black;
+    text-align: center;
+    background-image: url(../assets/img/fondoPapel.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: drop-shadow(-12px 9px 6px black);
+    background-position: top; }
+  .mainIndex figcaption {
+    font-family: "LexendDeca-Light";
+    font-size: 25px;
+    color: black;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-image: url(../assets/img/fondoPapel.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: drop-shadow(-12px 9px 6px black); }
+  .mainIndex .carruselImg {
+    grid-area: item2; }
+    .mainIndex .carruselImg div img {
+      height: 400px;
+      box-shadow: 0px 10px 6px 1px black;
+      border-radius: 10px; }
+  .mainIndex .sticker {
+    grid-area: item3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 150px; }
+    .mainIndex .sticker img {
+      width: 300px; }
+  .mainIndex .botes {
+    grid-area: item4;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    top: 250px; }
+    .mainIndex .botes img {
+      width: 100%; }
+  .mainIndex h2 {
+    grid-area: item5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-family: "theWanters";
+    font-size: 50px;
+    color: black;
+    text-align: center;
+    background-image: url(../assets/img/fondoPapel.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: drop-shadow(-12px 9px 6px black);
+    background-position: top; }
+  .mainIndex .ofertas {
+    grid-area: item6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px; }
+    .mainIndex .ofertas figure img {
+      max-height: 300px;
+      width: 100%;
+      border-radius: 15px; }
+
 footer {
   display: flex;
-  flex-direction: row;
   justify-content: flex-end;
   align-items: flex-end;
   height: 300px;
@@ -57,7 +139,7 @@ footer {
   background-image: url(../assets/img/suelo.png);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: unset; }
+  filter: none; }
   footer h3 {
     font-family: "FreeStyle-Script";
     font-size: 3.75rem;
@@ -68,3 +150,38 @@ footer {
     padding: 10px; }
     footer section div a img {
       width: 200px; }
+
+@keyframes jello-vertical {
+  0% {
+    transform: scale3d(1, 1, 1); }
+  30% {
+    transform: scale3d(0.75, 1.25, 1); }
+  40% {
+    transform: scale3d(1.25, 0.75, 1); }
+  50% {
+    transform: scale3d(0.85, 1.15, 1); }
+  65% {
+    transform: scale3d(1.05, 0.95, 1); }
+  75% {
+    transform: scale3d(0.95, 1.05, 1); }
+  100% {
+    transform: scale3d(1, 1, 1); } }
+
+.navBar li a:hover {
+  color: #60605F; }
+
+.navBar li:nth-child(2) a:hover {
+  color: #F4B911; }
+
+.navBar li:nth-child(3) a:hover {
+  color: #15A015; }
+
+.navBar li:nth-child(4) a:hover {
+  color: #F25814; }
+
+.producto div:hover {
+  cursor: pointer;
+  animation: jello-vertical 1s both; }
+
+button:hover {
+  animation: jello-vertical 1s both; }

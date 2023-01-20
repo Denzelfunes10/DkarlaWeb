@@ -1,0 +1,44 @@
+@keyframes jello-vertical {
+    0% {
+        transform: scale3d(1, 1, 1);
+    }
+    30% {
+        transform: scale3d(0.75, 1.25, 1);
+    }
+    40% {
+        transform: scale3d(1.25, 0.75, 1);
+    }
+    50% {
+        transform: scale3d(0.85, 1.15, 1);
+    }
+    65% {
+        transform: scale3d(1.05, 0.95, 1);
+    }
+    75% {
+        transform: scale3d(0.95, 1.05, 1);
+    }
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
+}
+.navBar{
+    li a:hover{
+        color: $gray;
+    }
+    li:nth-child(2) a:hover{
+        color: $cebolla;
+    }
+    li:nth-child(3) a:hover{
+        color: $chimichurri;
+    }
+    li:nth-child(4) a:hover{
+        color: $escabeche;
+    }
+}
+.producto div:hover {
+    cursor: pointer;
+    animation: jello-vertical 1s both;
+}
+button:hover{
+	animation: jello-vertical 1s both;
+}
