@@ -59,14 +59,14 @@
 
         img{
             width: 100%;
+            max-width: 760px;
         }
     }
     h2{
         grid-area: item5;
         @include flex(center, center);
-        padding: 20px;
 
-        @include font($title, 50px, black, center);
+        @include font($title, 60px, black, center);
 
         background-image: url(../assets/img/fondoPapel.png);
         @include bg-settings(cover, no-repeat, $shadow);
@@ -76,6 +76,7 @@
         grid-area: item6;
         @include flex(center, center);
         column-gap: 20px;
+        padding-inline: 20px;
 
         figure img{
             max-height: 300px;

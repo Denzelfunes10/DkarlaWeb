@@ -97,7 +97,7 @@
             }
         }
     }
-    .contactFooter{
-        @include flexColumn(center, flex-end)
-    }
+}
+.contactFooter{
+    @include flexColumn(flex-end, center)
 }

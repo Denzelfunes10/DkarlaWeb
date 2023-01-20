@@ -7,7 +7,7 @@ footer{
     @include bg-settings(cover, no-repeat, none);
 
     h3{
-        @include font($subtitle, 3.75rem, #fff, center)
+        @include font($subtitle, 60px, #fff, center)
     }
 
     section{

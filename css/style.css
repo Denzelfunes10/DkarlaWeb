@@ -41,7 +41,7 @@ header .divNav {
     header .divNav .nav-item a {
       text-decoration: none;
       font-family: "theWanters";
-      font-size: 2.5rem;
+      font-size: 40px;
       color: #fff;
       text-align: center;
       filter: drop-shadow(-2px 4px 1px black); }
@@ -103,15 +103,15 @@ header .divNav {
     z-index: 1;
     top: 250px; }
     .mainIndex .botes img {
-      width: 100%; }
+      width: 100%;
+      max-width: 760px; }
   .mainIndex h2 {
     grid-area: item5;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
     font-family: "theWanters";
-    font-size: 50px;
+    font-size: 60px;
     color: black;
     text-align: center;
     background-image: url(../assets/img/fondoPapel.png);
@@ -124,7 +124,8 @@ header .divNav {
     display: flex;
     justify-content: center;
     align-items: center;
-    column-gap: 20px; }
+    column-gap: 20px;
+    padding-inline: 20px; }
     .mainIndex .ofertas figure img {
       max-height: 300px;
       width: 100%;
@@ -385,11 +386,12 @@ header .divNav {
           color: #F4B911;
           text-align: center;
           margin-bottom: 0; }
-  .contactMain .contactFooter {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end; }
+
+.contactFooter {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center; }
 
 footer {
   display: flex;
@@ -403,7 +405,7 @@ footer {
   filter: none; }
   footer h3 {
     font-family: "FreeStyle-Script";
-    font-size: 3.75rem;
+    font-size: 60px;
     color: #fff;
     text-align: center; }
   footer section {
@@ -446,3 +448,79 @@ footer {
 
 button:hover {
   animation: jello-vertical 1s both; }
+
+@media (max-width: 1400px) {
+  header .logo a img {
+    height: 250px; }
+  header .divNav {
+    background-size: 100% 125px; }
+    header .divNav .nav-item {
+      padding: 25px 5px 0px 5px; }
+      header .divNav .nav-item a {
+        font-size: 30px; }
+        header .divNav .nav-item a img {
+          height: 30px; }
+  .mainIndex {
+    grid-template-rows: 70px 400px 250px 90px 300px; }
+    .mainIndex h1 {
+      font-size: 40px; }
+    .mainIndex figcaption {
+      font-size: 20px; }
+    .mainIndex .carruselImg div img {
+      height: 300px; }
+    .mainIndex .sticker {
+      padding-inline: 100px; }
+      .mainIndex .sticker img {
+        width: 200px; }
+    .mainIndex .botes {
+      top: 150px; }
+      .mainIndex .botes img {
+        max-width: 500px; }
+    .mainIndex h2 {
+      font-size: 60px; }
+    .mainIndex .ofertas figure img {
+      max-height: 250px; }
+  footer {
+    height: 200px; }
+    footer h3 {
+      font-size: 50px; }
+    footer section div a img {
+      width: 175px; } }
+
+@media (max-width: 1024px) {
+  header .logo a img {
+    height: 185px; }
+  header .divNav {
+    background-size: 100% 100px; }
+    header .divNav .nav-item {
+      padding: 20px 5px 0px 5px; }
+      header .divNav .nav-item a {
+        font-size: 25px; }
+        header .divNav .nav-item a img {
+          height: 25px; }
+  .mainIndex {
+    grid-template-rows: 50px 300px 250px 60px 300px 100px;
+    grid-template-areas: ". . item1 . ." ". item2 item2 item2 ." "item3 item3 item3 item3 item3" ". item5 item5 item5 ." "item6 item6 item6 item6 item6" ". item4 item4 item4 ."; }
+    .mainIndex h1 {
+      font-size: 30px; }
+    .mainIndex .carruselImg div img {
+      height: 200px; }
+    .mainIndex .sticker {
+      padding-inline: 50px; }
+      .mainIndex .sticker img {
+        width: 200px; }
+    .mainIndex .botes {
+      top: 0; }
+      .mainIndex .botes img {
+        height: 275px; }
+    .mainIndex h2 {
+      font-size: 40px; }
+    .mainIndex .ofertas figure img {
+      max-height: 150px; }
+  footer {
+    justify-content: center;
+    height: 275px; }
+    footer h3 {
+      font-size: 35px; }
+    footer section div a img {
+      width: 125px; } }

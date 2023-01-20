@@ -17,7 +17,7 @@ header{
 
             a{
                 text-decoration: none;
-                @include font($title, 2.5rem, #fff, center);
+                @include font($title, 40px, #fff, center);
                 filter: drop-shadow(-2px 4px 1px black);
             }
         }

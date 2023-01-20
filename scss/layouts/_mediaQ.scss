@@ -1,0 +1,129 @@
+@media (max-width: 1400px) {
+    //----- headers ----- //
+    header{
+        .logo a img{
+            height: 250px;
+        }
+        .divNav{
+            background-size: 100% 125px;
+            .nav-item{
+                padding: 25px 5px 0px 5px;
+                a{
+                    font-size: 30px;
+                    img{
+                        height: 30px;
+                    }
+                }
+            }
+        }
+    }
+    .mainIndex{
+        grid-template-rows: 70px 400px 250px 90px 300px;
+        
+        h1{
+            font-size: 40px;
+        }
+        figcaption{
+            font-size: 20px;
+        }
+        .carruselImg div img{
+            height: 300px;
+        }
+        .sticker{
+            padding-inline: 100px;     
+            img{
+                width: 200px;
+            }
+        }
+        .botes{
+            top: 150px;
+            img{
+                max-width: 500px;
+            }
+        }
+        h2{
+            font-size: 60px;
+        }
+        .ofertas figure img{
+            max-height: 250px;
+        }
+    }
+    footer{
+        height: 200px;
+        h3{
+            font-size: 50px;
+        }
+    
+        section{
+            div a img{
+                width: 175px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    //----- headers ----- //
+    header{
+        .logo a img{
+            height: 185px;
+        }
+        .divNav{
+            background-size: 100% 100px;
+            .nav-item{
+                padding: 20px 5px 0px 5px;
+                a{
+                    font-size: 25px;
+                    img{
+                        height: 25px;
+                    }
+                }
+            }
+        }
+    }
+    .mainIndex{
+        grid-template-rows: 50px 300px 250px 60px 300px 100px;
+        grid-template-areas:
+        ". . item1 . ."
+        ". item2 item2 item2 ."
+        "item3 item3 item3 item3 item3"
+        ". item5 item5 item5 ."
+        "item6 item6 item6 item6 item6"
+        ". item4 item4 item4 ."
+        ;
+        h1{
+            font-size: 30px;
+        }
+        .carruselImg div img{
+            height: 200px;
+        }
+        .sticker{
+            padding-inline: 50px;     
+            img{
+                width: 200px;
+            }
+        }
+        .botes{
+            top: 0; 
+            img{
+                height: 275px;
+            }
+        }
+        h2{
+            font-size: 40px;
+        }
+        .ofertas figure img{
+            max-height: 150px;
+        }
+    }
+    footer{
+        justify-content: center;
+        height: 275px;
+        h3{
+            font-size: 35px;
+        }
+        section div a img{
+            width: 125px;
+        }
+    }
+}
