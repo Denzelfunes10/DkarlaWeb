@@ -200,7 +200,7 @@ button:hover{
     text-align: center;
 }
 .carruselImg{
-    grid-area: item2;
+    grid-area: item2;;
 }
 .pics{
     height: 400px;

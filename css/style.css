@@ -37,7 +37,7 @@ header .divNav {
   filter: drop-shadow(-12px 9px 6px black); }
   header .divNav .nav-item {
     list-style: none;
-    padding: 40px 10px 0px 10px; }
+    padding: 35px 10px 0px 10px; }
     header .divNav .nav-item a {
       text-decoration: none;
       font-family: "theWanters";
@@ -129,6 +129,267 @@ header .divNav {
       max-height: 300px;
       width: 100%;
       border-radius: 15px; }
+
+.bodyPage {
+  background-image: url(../assets/img/fondoVegetal.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .bodyPage .mainPage {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 2fr 1fr 400px;
+    grid-template-areas: ". portada portada ." ". . info info" "bote bote venta venta"; }
+    .bodyPage .mainPage .portada {
+      grid-area: portada;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #F7F4EB;
+      background-size: contain;
+      padding: 40px; }
+      .bodyPage .mainPage .portada figure img {
+        width: 500px; }
+      .bodyPage .mainPage .portada .stickerPortada {
+        width: 300px; }
+    .bodyPage .mainPage .info {
+      grid-area: info;
+      display: flex;
+      flex-direction: column;
+      font-family: "LexendDeca-Light";
+      font-size: 20px;
+      color: black;
+      text-align: justify;
+      row-gap: 20px;
+      padding-top: 50px;
+      padding-right: 30px; }
+      .bodyPage .mainPage .info h2 {
+        font-family: "FreeStyle-Script";
+        font-size: 80px;
+        color: #60605F;
+        text-align: justify; }
+    .bodyPage .mainPage .ventaCe {
+      grid-area: venta;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      column-gap: 20px;
+      padding-inline: 5px; }
+      .bodyPage .mainPage .ventaCe h3 {
+        background-color: #F4B911; }
+      .bodyPage .mainPage .ventaCe div {
+        background-color: #F4B911; }
+    .bodyPage .mainPage .ventaCh {
+      grid-area: venta;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      column-gap: 20px;
+      padding-inline: 5px; }
+      .bodyPage .mainPage .ventaCh h3 {
+        background-color: #15A015; }
+      .bodyPage .mainPage .ventaCh div {
+        background-color: #15A015; }
+    .bodyPage .mainPage .ventaEs {
+      grid-area: venta;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      column-gap: 20px;
+      padding-inline: 5px; }
+      .bodyPage .mainPage .ventaEs h3 {
+        background-color: #F25814; }
+      .bodyPage .mainPage .ventaEs div {
+        background-color: #F25814; }
+    .bodyPage .mainPage .botesCe {
+      grid-area: bote;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      position: relative;
+      z-index: 1;
+      top: 250px; }
+      .bodyPage .mainPage .botesCe img {
+        height: 600px; }
+    .bodyPage .mainPage .botesCh {
+      grid-area: bote;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      position: relative;
+      z-index: 1;
+      top: 250px; }
+      .bodyPage .mainPage .botesCh img {
+        height: 600px; }
+    .bodyPage .mainPage .botesEs {
+      grid-area: bote;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      position: relative;
+      z-index: 1;
+      top: 250px; }
+      .bodyPage .mainPage .botesEs img {
+        height: 600px; }
+    .bodyPage .mainPage .producto {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 200px 10px 50px 5px 50px;
+      grid-template-areas: "bote bote" ". ." "onz price" ". ." "cart cart"; }
+      .bodyPage .mainPage .producto figure {
+        grid-area: bote;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0; }
+        .bodyPage .mainPage .producto figure img {
+          width: 100%;
+          max-height: 190px;
+          border-radius: 15px; }
+      .bodyPage .mainPage .producto h3 {
+        grid-area: onz;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        font-family: "LexendDeca-Light";
+        font-size: 20px;
+        color: black;
+        text-align: center;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px; }
+      .bodyPage .mainPage .producto p {
+        grid-area: price;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #60605F;
+        height: 100%;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        font-family: "LexendDeca-Light";
+        font-size: 20px;
+        color: #fff;
+        text-align: center; }
+      .bodyPage .mainPage .producto div {
+        grid-area: cart;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        padding: 5px; }
+        .bodyPage .mainPage .producto div img {
+          width: 45px; }
+
+.contactMain {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas: "img1 form img2" "img1 form img2" "img1 form img2"; }
+  .contactMain .imgDecoration {
+    grid-area: img1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 20px; }
+    .contactMain .imgDecoration img {
+      width: 100%;
+      max-width: 300px;
+      min-width: 190px; }
+  .contactMain .imgDecoration1 {
+    grid-area: img2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 20px; }
+    .contactMain .imgDecoration1 img {
+      width: 100%;
+      max-width: 300px;
+      min-width: 190px; }
+  .contactMain .contactForm {
+    grid-area: form;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 10px;
+    padding: 30px;
+    background-color: #fff; }
+    .contactMain .contactForm h1 {
+      font-family: "theWanters";
+      font-size: 40px;
+      color: #F4B911;
+      text-align: center;
+      padding-left: 0px;
+      padding-bottom: 10px; }
+    .contactMain .contactForm h2 {
+      font-family: "LexendDeca-Light";
+      font-size: 20px;
+      color: black;
+      text-align: center;
+      padding-bottom: 20px; }
+    .contactMain .contactForm p {
+      font-family: "LexendDeca-Light";
+      font-size: 15px;
+      color: black;
+      text-align: left;
+      margin-bottom: 0; }
+    .contactMain .contactForm form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .contactMain .contactForm form .obligatorio {
+        color: #F4B911; }
+      .contactMain .contactForm form input {
+        background-color: #fff;
+        width: 450px;
+        height: 40px;
+        border-radius: 5px;
+        border-style: solid;
+        border-top: 1px;
+        border-color: #F4B911;
+        padding-left: 10px;
+        margin-top: 10px;
+        margin-bottom: 20px; }
+      .contactMain .contactForm form textarea {
+        background-color: #fff;
+        width: 440px;
+        height: 150px;
+        border-radius: 5px;
+        border-style: solid;
+        border-top: 1px;
+        border-color: #F4B911;
+        padding-top: 15px;
+        padding-left: 10px;
+        margin-bottom: 20px;
+        margin-top: 10px; }
+      .contactMain .contactForm form .buttonSend {
+        height: 45px;
+        width: 450px;
+        padding-left: 5px;
+        padding-right: 5px;
+        background-color: black;
+        border-color: black;
+        border-style: solid;
+        border-radius: 10px;
+        cursor: pointer; }
+        .contactMain .contactForm form .buttonSend p {
+          font-family: "LexendDeca-Light";
+          font-size: 20px;
+          color: #F4B911;
+          text-align: center;
+          margin-bottom: 0; }
+  .contactMain .contactFooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end; }
 
 footer {
   display: flex;
