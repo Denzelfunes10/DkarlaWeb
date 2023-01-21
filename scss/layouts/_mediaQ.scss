@@ -1,3 +1,5 @@
+/* ----------------- Pantallas de 1024px a 1400px ----------------- */
+
 @media (max-width: 1400px) {
     //----- headers ----- //
     header{
@@ -41,11 +43,67 @@
                 max-width: 500px;
             }
         }
-        h2{
-            font-size: 60px;
-        }
         .ofertas figure img{
             max-height: 250px;
+        }
+    }
+    .bodyPage .mainPage{
+        grid-template-rows: 700px 1fr 400px;
+        
+        .portada{
+            figure img{
+                width: 400px;
+            }
+            .stickerPortada{
+                width: 250px;
+            }
+        }
+        .ventaCe{
+            column-gap: 10px;
+        }
+        .ventaCh{
+            column-gap: 10px;
+        }
+        .ventaEs{
+            column-gap: 10px;
+        }
+        .botesCe{
+            top: 150px;
+            img{
+                height: 400px;
+            }
+        }
+        .botesCh{
+            top: 175px;
+            img{
+                height: 400px;
+            }
+        }
+        .botesEs{
+            top: 150px;
+            img{
+                height: 400px;
+            }
+        }
+        .producto figure img{
+            max-height: 200px;
+            h3{
+                font-size: 20px;
+            }
+            p{
+                font-size: 20px;
+            }
+        }
+    }
+    .contactMain .contactForm form{
+        input{
+            width: 350px;
+        }
+        textarea{
+            width: 350px; 
+        }
+        .buttonSend{
+            width: 350px;  
         }
     }
     footer{
@@ -54,29 +112,28 @@
             font-size: 50px;
         }
     
-        section{
-            div a img{
-                width: 175px;
-            }
+        section div a img{
+            width: 175px;
         }
     }
 }
+
+// ----------------- Pantallas de 768px a 1024px ----------------- //
 
 @media (max-width: 1024px) {
     //----- headers ----- //
     header{
         .logo a img{
             height: 185px;
+            margin: 5px 0 0 0;
         }
         .divNav{
             background-size: 100% 100px;
-            .nav-item{
-                padding: 20px 5px 0px 5px;
-                a{
-                    font-size: 25px;
-                    img{
-                        height: 25px;
-                    }
+            padding: 0;
+            .nav-item a{
+                font-size: 25px;
+                img{
+                    height: 25px;
                 }
             }
         }
@@ -116,6 +173,58 @@
             max-height: 150px;
         }
     }
+    .bodyPage .mainPage{
+        grid-template-rows: 600px 1fr 350px 300px;
+        grid-template-areas: 
+        ". portada portada ."
+        ". info info ."
+        "venta venta venta venta"
+        ". bote bote ."
+        ;
+        
+        .portada{
+            figure img{
+                width: 300px;
+            }
+            .stickerPortada{
+                width: 200px;
+            }
+        }
+        .info{
+            padding-right: 0;
+        }
+        .botesEs{
+            top: 175px;
+        }
+        .producto figure img{
+            max-height: 175px;
+        }
+    }
+    .contactMain{
+        .imgDecoration{
+            padding-inline: 5px;
+        }
+        .imgDecoration1{
+            padding-inline: 5px;
+        }
+        .contactForm{
+            padding: 20px;
+            h2{
+                font-size: 15px;
+            }
+            form{
+                input{
+                    width: 275px;
+                }
+                textarea{
+                    width: 275px; 
+                }
+                .buttonSend{
+                    width: 275px;  
+                }
+            }
+        }
+    }
     footer{
         justify-content: center;
         height: 275px;
@@ -124,6 +233,186 @@
         }
         section div a img{
             width: 125px;
+        }
+    }
+}
+
+// ----------------- Pantallas de 320px a 768px ----------------- //
+
+@media (max-width: 767px) {
+    //----- headers ----- //
+    header{
+        .logo a img{
+            margin: 5px;
+            height: 130px;
+            filter: none;
+        }
+        .divNav{
+            background: none;
+            filter: none;
+
+            .NavButton{
+                border-radius: 0;
+                margin-top: 10px;
+                width: 100px;
+                background-image: url(../assets/img/FondoMadera.jpg);
+                background-size: cover;
+                filter: drop-shadow(0px 4px 1px);
+                
+                .lines img{
+                    height: 40px;
+                }
+            }
+            
+            .navBar {
+                .nav-item{
+                    padding: 0px;
+                    a{
+                        color: $gray;
+                        background-color: #F7F4EB;
+                        font-size: 20px;
+                        padding: 5px;
+                    }
+                }
+                li:nth-child(2) a{
+                    color: #F4B911;
+                }
+                li:nth-child(3) a{
+                    color: #15A015;
+                }
+                li:nth-child(4) a{
+                    color: #F25814;
+                }
+            }
+        }
+    }
+    .mainIndex{
+        grid-template-rows: 40px 350px 125px 60px 800px 100px;
+        h1{
+            font-size: 25px;
+            padding: 5px;
+            margin: 0;
+        }
+        figcaption{
+            padding: 5px;
+        }
+        .sticker{
+            align-items: flex-start;
+            padding-inline: 5px;     
+            img{
+                width: 95px;
+            }
+        }
+        h2{
+            font-size: 35px;
+        }
+        .ofertas{
+            @include flexColumn(center, center);
+            row-gap: 10px;
+            padding-inline: 20px;
+        }
+        .botes{
+            top: -20px;
+            img{
+                height: 200px;
+                min-width: 225px;
+            }
+        }
+    }
+    .bodyPage .mainPage{
+        grid-template-columns: 1fr 2fr 2fr 1fr;
+        grid-template-rows: 400px 1fr 1100px 150px;
+        
+        .portada{
+            figure img{
+                width: 180px;
+            }
+            .stickerPortada{
+                width: 100px;
+            }
+        }
+        .info{
+            padding-top: 30px;
+            row-gap: 10px;
+            h2{
+                font-size: 50px;
+            }
+        }
+        .ventaCe{
+            @include flexColumn(center, center);
+        }
+        .ventaCh{
+            @include flexColumn(center, center);
+        }
+        .ventaEs{
+            @include flexColumn(center, center);
+        }
+        .botesCe{
+            top: 80px;
+            img{
+                height: 225px;
+            }
+        } 
+        .botesCh{
+            top: 90px;
+            img{
+                height: 225px;
+            }
+        } 
+        .botesEs{
+            top: 90px;
+            img{
+                height: 225px;
+            }
+        }
+    }
+    .contactMain{
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-rows: 200px 1fr 200px;
+        grid-template-areas: 
+        "img1 img1 img1"
+        ". form ."
+        "img2 img2 img2"
+        ;
+        .imgDecoration{
+            flex-direction: row;
+            img{
+                max-width: 190px;
+                min-width: 80px;
+            }
+        }
+        .imgDecoration1{
+            flex-direction: row;
+            img{
+                max-width: 190px;
+                min-width: 80px;
+            }
+        }
+        .contactForm{
+            padding: 20px;
+            h1{
+                font-size: 30px;
+            }
+            form{
+                input{
+                    width: 200px;
+                }
+                textarea{
+                    width: 200px; 
+                }
+                .buttonSend{
+                    width: 200px;  
+                }
+            }
+        }
+    }
+    footer{
+        height: 150px;
+        h3{
+            font-size: 22px;
+        }
+        section div a img{
+            width: 75px;
         }
     }
 }

@@ -168,7 +168,7 @@ header .divNav {
         font-family: "FreeStyle-Script";
         font-size: 80px;
         color: #60605F;
-        text-align: justify; }
+        text-align: center; }
     .bodyPage .mainPage .ventaCe {
       grid-area: venta;
       display: flex;
@@ -449,6 +449,7 @@ footer {
 button:hover {
   animation: jello-vertical 1s both; }
 
+/* ----------------- Pantallas de 1024px a 1400px ----------------- */
 @media (max-width: 1400px) {
   header .logo a img {
     height: 250px; }
@@ -476,10 +477,44 @@ button:hover {
       top: 150px; }
       .mainIndex .botes img {
         max-width: 500px; }
-    .mainIndex h2 {
-      font-size: 60px; }
     .mainIndex .ofertas figure img {
       max-height: 250px; }
+  .bodyPage .mainPage {
+    grid-template-rows: 700px 1fr 400px; }
+    .bodyPage .mainPage .portada figure img {
+      width: 400px; }
+    .bodyPage .mainPage .portada .stickerPortada {
+      width: 250px; }
+    .bodyPage .mainPage .ventaCe {
+      column-gap: 10px; }
+    .bodyPage .mainPage .ventaCh {
+      column-gap: 10px; }
+    .bodyPage .mainPage .ventaEs {
+      column-gap: 10px; }
+    .bodyPage .mainPage .botesCe {
+      top: 150px; }
+      .bodyPage .mainPage .botesCe img {
+        height: 400px; }
+    .bodyPage .mainPage .botesCh {
+      top: 175px; }
+      .bodyPage .mainPage .botesCh img {
+        height: 400px; }
+    .bodyPage .mainPage .botesEs {
+      top: 150px; }
+      .bodyPage .mainPage .botesEs img {
+        height: 400px; }
+    .bodyPage .mainPage .producto figure img {
+      max-height: 200px; }
+      .bodyPage .mainPage .producto figure img h3 {
+        font-size: 20px; }
+      .bodyPage .mainPage .producto figure img p {
+        font-size: 20px; }
+  .contactMain .contactForm form input {
+    width: 350px; }
+  .contactMain .contactForm form textarea {
+    width: 350px; }
+  .contactMain .contactForm form .buttonSend {
+    width: 350px; }
   footer {
     height: 200px; }
     footer h3 {
@@ -489,15 +524,15 @@ button:hover {
 
 @media (max-width: 1024px) {
   header .logo a img {
-    height: 185px; }
+    height: 185px;
+    margin: 5px 0 0 0; }
   header .divNav {
-    background-size: 100% 100px; }
-    header .divNav .nav-item {
-      padding: 20px 5px 0px 5px; }
-      header .divNav .nav-item a {
-        font-size: 25px; }
-        header .divNav .nav-item a img {
-          height: 25px; }
+    background-size: 100% 100px;
+    padding: 0; }
+    header .divNav .nav-item a {
+      font-size: 25px; }
+      header .divNav .nav-item a img {
+        height: 25px; }
   .mainIndex {
     grid-template-rows: 50px 300px 250px 60px 300px 100px;
     grid-template-areas: ". . item1 . ." ". item2 item2 item2 ." "item3 item3 item3 item3 item3" ". item5 item5 item5 ." "item6 item6 item6 item6 item6" ". item4 item4 item4 ."; }
@@ -517,6 +552,33 @@ button:hover {
       font-size: 40px; }
     .mainIndex .ofertas figure img {
       max-height: 150px; }
+  .bodyPage .mainPage {
+    grid-template-rows: 600px 1fr 350px 300px;
+    grid-template-areas: ". portada portada ." ". info info ." "venta venta venta venta" ". bote bote ."; }
+    .bodyPage .mainPage .portada figure img {
+      width: 300px; }
+    .bodyPage .mainPage .portada .stickerPortada {
+      width: 200px; }
+    .bodyPage .mainPage .info {
+      padding-right: 0; }
+    .bodyPage .mainPage .botesEs {
+      top: 175px; }
+    .bodyPage .mainPage .producto figure img {
+      max-height: 175px; }
+  .contactMain .imgDecoration {
+    padding-inline: 5px; }
+  .contactMain .imgDecoration1 {
+    padding-inline: 5px; }
+  .contactMain .contactForm {
+    padding: 20px; }
+    .contactMain .contactForm h2 {
+      font-size: 15px; }
+    .contactMain .contactForm form input {
+      width: 275px; }
+    .contactMain .contactForm form textarea {
+      width: 275px; }
+    .contactMain .contactForm form .buttonSend {
+      width: 275px; }
   footer {
     justify-content: center;
     height: 275px; }
@@ -524,3 +586,130 @@ button:hover {
       font-size: 35px; }
     footer section div a img {
       width: 125px; } }
+
+@media (max-width: 767px) {
+  header .logo a img {
+    margin: 5px;
+    height: 130px;
+    filter: none; }
+  header .divNav {
+    background: none;
+    filter: none; }
+    header .divNav .NavButton {
+      border-radius: 0;
+      margin-top: 10px;
+      width: 100px;
+      background-image: url(../assets/img/FondoMadera.jpg);
+      background-size: cover;
+      filter: drop-shadow(0px 4px 1px); }
+      header .divNav .NavButton .lines img {
+        height: 40px; }
+    header .divNav .navBar .nav-item {
+      padding: 0px; }
+      header .divNav .navBar .nav-item a {
+        color: #60605F;
+        background-color: #F7F4EB;
+        font-size: 20px;
+        padding: 5px; }
+    header .divNav .navBar li:nth-child(2) a {
+      color: #F4B911; }
+    header .divNav .navBar li:nth-child(3) a {
+      color: #15A015; }
+    header .divNav .navBar li:nth-child(4) a {
+      color: #F25814; }
+  .mainIndex {
+    grid-template-rows: 40px 350px 125px 60px 800px 100px; }
+    .mainIndex h1 {
+      font-size: 25px;
+      padding: 5px;
+      margin: 0; }
+    .mainIndex figcaption {
+      padding: 5px; }
+    .mainIndex .sticker {
+      align-items: flex-start;
+      padding-inline: 5px; }
+      .mainIndex .sticker img {
+        width: 95px; }
+    .mainIndex h2 {
+      font-size: 35px; }
+    .mainIndex .ofertas {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      row-gap: 10px;
+      padding-inline: 20px; }
+    .mainIndex .botes {
+      top: -20px; }
+      .mainIndex .botes img {
+        height: 200px;
+        min-width: 225px; }
+  .bodyPage .mainPage {
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-template-rows: 400px 1fr 1100px 150px; }
+    .bodyPage .mainPage .portada figure img {
+      width: 180px; }
+    .bodyPage .mainPage .portada .stickerPortada {
+      width: 100px; }
+    .bodyPage .mainPage .info {
+      padding-top: 30px;
+      row-gap: 10px; }
+      .bodyPage .mainPage .info h2 {
+        font-size: 50px; }
+    .bodyPage .mainPage .ventaCe {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+    .bodyPage .mainPage .ventaCh {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+    .bodyPage .mainPage .ventaEs {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+    .bodyPage .mainPage .botesCe {
+      top: 80px; }
+      .bodyPage .mainPage .botesCe img {
+        height: 225px; }
+    .bodyPage .mainPage .botesCh {
+      top: 90px; }
+      .bodyPage .mainPage .botesCh img {
+        height: 225px; }
+    .bodyPage .mainPage .botesEs {
+      top: 90px; }
+      .bodyPage .mainPage .botesEs img {
+        height: 225px; }
+  .contactMain {
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 200px 1fr 200px;
+    grid-template-areas: "img1 img1 img1" ". form ." "img2 img2 img2"; }
+    .contactMain .imgDecoration {
+      flex-direction: row; }
+      .contactMain .imgDecoration img {
+        max-width: 190px;
+        min-width: 80px; }
+    .contactMain .imgDecoration1 {
+      flex-direction: row; }
+      .contactMain .imgDecoration1 img {
+        max-width: 190px;
+        min-width: 80px; }
+    .contactMain .contactForm {
+      padding: 20px; }
+      .contactMain .contactForm h1 {
+        font-size: 30px; }
+      .contactMain .contactForm form input {
+        width: 200px; }
+      .contactMain .contactForm form textarea {
+        width: 200px; }
+      .contactMain .contactForm form .buttonSend {
+        width: 200px; }
+  footer {
+    height: 150px; }
+    footer h3 {
+      font-size: 22px; }
+    footer section div a img {
+      width: 75px; } }

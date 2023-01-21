@@ -20,10 +20,10 @@
             background-size: contain;
             padding: 40px;
             figure img{
-                    width: 500px;
+                width: 500px;
             }
             .stickerPortada{
-                    width: 300px;
+                width: 300px;
             }
         }
         .info{
@@ -35,7 +35,7 @@
             padding-top: 50px;
             padding-right: 30px;
             h2{
-                @include font($subtitle, 80px, $gray, justify);
+                @include font($subtitle, 80px, $gray, center);
             }
         }
         .ventaCe{

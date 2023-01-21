@@ -1046,8 +1046,6 @@ textarea{
         top: 5px;
     }
 
-    /* ----- grid productos ----- */
-    
     .contactMain{
         grid-template-columns: 1fr 3fr 1fr;
         grid-template-rows: 200px 1fr 200px;
