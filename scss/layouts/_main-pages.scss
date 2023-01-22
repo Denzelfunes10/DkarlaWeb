@@ -27,6 +27,9 @@
             }
         }
         .info{
+            h1{
+                @include font($subtitle, 80px, $gray, center);
+            }
             grid-area: info;
             display: flex;
             flex-direction: column;
@@ -35,7 +38,7 @@
             padding-top: 50px;
             padding-right: 30px;
             h2{
-                @include font($subtitle, 80px, $gray, center);
+                @extend h1;
             }
         }
         .ventaCe{

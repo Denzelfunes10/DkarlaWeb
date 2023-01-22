@@ -139,7 +139,7 @@
         }
     }
     .mainIndex{
-        grid-template-rows: 50px 300px 250px 60px 300px 100px;
+        grid-template-rows: 50px 2fr 250px 60px 300px 100px;
         grid-template-areas:
         ". . item1 . ."
         ". item2 item2 item2 ."
@@ -152,7 +152,7 @@
             font-size: 30px;
         }
         .carruselImg div img{
-            height: 200px;
+            height: auto;
         }
         .sticker{
             padding-inline: 50px;     
@@ -287,35 +287,46 @@
         }
     }
     .mainIndex{
-        grid-template-rows: 40px 350px 125px 60px 800px 100px;
-        h1{
-            font-size: 25px;
-            padding: 5px;
-            margin: 0;
+        grid-template-rows: 60px 1fr auto 60px auto 200px;
+        grid-template-areas:
+        ". . item1 . ."
+        "item2 item2 item2 item2 item2"
+        "item3 item3 item3 item3 item3"
+        ". item5 item5 item5 ."
+        "item6 item6 item6 item6 item6"
+        ". item4 item4 item4 ."
+        ;
+        .carruselImg div img{
+            border-radius: 0;
         }
         figcaption{
             padding: 5px;
         }
         .sticker{
-            align-items: flex-start;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap ;
             padding-inline: 5px;     
             img{
-                width: 95px;
+                width: 125px;
             }
         }
         h2{
             font-size: 35px;
         }
         .ofertas{
-            @include flexColumn(center, center);
-            row-gap: 10px;
+            flex-wrap: wrap;
+            padding-top: 20px;
             padding-inline: 20px;
+            figure img{
+                max-height: 140px;
+            }
         }
         .botes{
-            top: -20px;
+            top: 80px;
             img{
                 height: 200px;
-                min-width: 225px;
+                min-width: 250px;
             }
         }
     }
@@ -332,11 +343,11 @@
             }
         }
         .info{
-            padding-top: 30px;
-            row-gap: 10px;
-            h2{
+            h1{
                 font-size: 50px;
             }
+            padding-top: 30px;
+            row-gap: 10px;
         }
         .ventaCe{
             @include flexColumn(center, center);
