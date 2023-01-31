@@ -1,0 +1,103 @@
+.contactMain{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+    "img1 form img2"
+    "img1 form img2"
+    "img1 form img2"
+    ;
+
+    .imgDecoration{
+        grid-area: img1;
+        @include flexColumn(center, center);
+        padding-inline: 20px;
+        img{
+            width: 100%;
+            max-width: 300px;
+            min-width: 190px;
+        }
+    }
+    .imgDecoration1{
+        grid-area: img2;
+        @include flexColumn(center, center);
+        padding-inline: 20px;
+        img{
+            width: 100%;
+            max-width: 300px;
+            min-width: 190px;
+        }
+    }
+    .contactForm{
+        grid-area: form;
+        @include flexColumn(center, center);
+        width: 100%; 
+        height: auto;
+        margin-top: 10px;
+        border-radius: 10px;
+        padding: 30px;
+        background-color: #fff;
+        h1{
+            @include font($title, 40px, $cebolla, center);
+            padding-left: 0px;
+            padding-bottom: 10px;
+        }
+        h2{
+            @include font($text, 20px, black, center);
+            padding-bottom: 20px;
+        }
+        p{
+            @include font($text, 15px, black, left);
+            margin-bottom: 0;
+        }
+        form{
+            @include flexColumn(center, center);
+            .obligatorio{
+                color: $cebolla; 
+            }
+            input{
+                background-color: #fff; 
+                width: 450px;
+                height: 40px; 
+                border-radius: 5px;  
+                border-style: solid; 
+                border-top: 1px; 
+                border-color: $cebolla;
+                padding-left: 10px; 
+                margin-top: 10px;
+                margin-bottom: 20px; 
+            }
+            textarea{
+                background-color: #fff; 
+                width: 440px; 
+                height: 150px; 
+                border-radius: 5px;  
+                border-style: solid; 
+                border-top: 1px; 
+                border-color: $cebolla; 
+                padding-top: 15px; 
+                padding-left: 10px;
+                margin-bottom: 20px; 
+                margin-top: 10px;
+            }
+            .buttonSend{
+                height: 45px;
+                width: 450px;  
+                padding-left: 5px;
+                padding-right: 5px;  
+                background-color: black; 
+                border-color: black; 
+                border-style: solid; 
+                border-radius: 10px;
+                cursor: pointer;
+                p{
+                    @include font($text, 20px, $cebolla, center);
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+.contactFooter{
+    @include flexColumn(flex-end, center)
+}

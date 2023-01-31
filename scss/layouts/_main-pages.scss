@@ -1,0 +1,161 @@
+.bodyPage{
+    background-image: url(../assets/img/fondoVegetal.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .mainPage{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 2fr 1fr 400px;
+        grid-template-areas: 
+        ". portada portada ."
+        ". . info info"
+        "bote bote venta venta"
+        ;
+
+        .portada{
+            grid-area: portada;
+            @include flexColumn(center, center);
+            background-color: #F7F4EB;
+            background-size: contain;
+            padding: 40px;
+            figure img{
+                width: 500px;
+            }
+            .stickerPortada{
+                width: 300px;
+            }
+        }
+        .info{
+            h1{
+                @include font($subtitle, 80px, $gray, center);
+            }
+            grid-area: info;
+            display: flex;
+            flex-direction: column;
+            @include font($text, 20px, black, justify);
+            row-gap: 20px;
+            padding-top: 50px;
+            padding-right: 30px;
+            h2{
+                @extend h1;
+            }
+        }
+        .ventaCe{
+            grid-area: venta;
+            @include flex(center, center);
+            column-gap: 20px;
+            padding-inline: 5px;
+            h3{
+                background-color: $cebolla;
+                }
+            div{
+                background-color: $cebolla;
+            }
+        }
+        .ventaCh{
+            grid-area: venta;
+            @include flex(center, center);
+            column-gap: 20px;
+            padding-inline: 5px;
+            h3{
+                background-color: $chimichurri;
+                }
+            div{
+                background-color: $chimichurri;
+            }
+        }
+        .ventaEs{
+            grid-area: venta;
+            @include flex(center, center);
+            column-gap: 20px;
+            padding-inline: 5px;
+            h3{
+                background-color: $escabeche;
+                }
+            div{
+                background-color: $escabeche;
+            }
+        }
+        .botesCe{
+            grid-area: bote;
+            @include flex(center, flex-end);
+            position: relative;
+            z-index: 1;
+            top: 250px;
+            img{
+                height: 600px;
+            }
+        }
+        .botesCh{
+            grid-area: bote;
+            @include flex(center, flex-end);
+            position: relative;
+            z-index: 1;
+            top: 250px;
+            img{
+                height: 600px;
+            }
+        }
+        .botesEs{
+            grid-area: bote;
+            @include flex(center, flex-end);
+            position: relative;
+            z-index: 1;
+            top: 250px;
+            img{
+                height: 600px;
+            }
+        }
+        .producto{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 200px 10px 50px 5px 50px;
+            grid-template-areas: 
+            "bote bote"
+            ". ."
+            "onz price"
+            ". ."
+            "cart cart"
+            ;
+            figure{
+                grid-area: bote;
+                @include flex(center, center);
+                margin: 0;
+                img{
+                    width: 100%;
+                    max-height: 190px;
+                    border-radius: 15px;
+                }
+            }
+            h3{
+                grid-area: onz;
+                @include flex(center, center);
+                height: 100%;
+                @include font($text, 20px, black, center);
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+            }
+            p{
+                grid-area: price;
+            
+                @include flex(center, center);
+                background-color: $gray;
+                height: 100%;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+            
+                @include font($text, 20px, #fff, center);
+            }
+            div{
+                grid-area: cart;
+                @include flex(center, center);
+                border-radius: 5px;
+                padding: 5px;
+                img{
+                    width: 45px;
+                }
+            }
+        }
+    }
+}

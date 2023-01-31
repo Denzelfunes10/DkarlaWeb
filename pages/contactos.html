@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contacanos! escribenos y siguienos en nuestras redes sociales">
+    <meta name="author" content="Denzel Funes">
+    <meta name="copyright" content="D'karlaFong">
+    <meta property="og: title" content="D'karla">
+    <meta property="og: description" content="Contactanos! | Dkarla">
+    <meta property="og: image" content="">
+    <meta property="og: url" content="">
+    <meta property="og: locales" content="es_ES">
+
+    <!-- Cambiamos nombre de página e icono de pagina-->
+    <title>Contactos | D'karla</title> 
+    <link rel="shortcut icon" href="../assets/img/logoPrincipal.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="bodyMain">
+    <!-- ENCABEZADO DE PAGINA -->
+    <header class="container-fluid d-flex justify-content-between p-0">
+
+        <!-- LOGO -->
+        <div class="logo">
+            <a href="../index.html"><img src="../assets/img/LogoBase.png" alt="Logo"></a>
+        </div>
+        <!-- BARRA DE NAVEGACIÓN -->
+        
+        <div class="divNav">
+            
+            <nav class="navbar navbar-expand-md NB">
+                
+                <button class="navbar-toggler NavButton" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="lines"><img src="../assets/img/MenuHamburguesa.png" alt="menu"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 navBar">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./cebolla.html">Cebolla</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./chimichurri.html">Chimichurri</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./escabeche.html">Escabeche</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contactos.html">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <picture>
+                                    <source media="(max-width: 767px)" srcset="../assets/img/cart2.png">
+                                    <img src="../assets/img/cart.png" alt="carrito de compras">
+                                </picture>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- CUERPO DE PAGINA -->
+    <main class="contactMain">
+
+        <div class="imgDecoration">
+            <img src="../assets/img/LogoCebolla.png" alt="Logo Cebolla">
+            <img src="../assets/img/LogoChimichurri.png" alt="Logo Chimichurri">
+            <img src="../assets/img/LogoEscabeche.png" alt="Logo Escabeche">
+        </div>
+        
+        <!-- EMPIEZA FORMULARIO -->
+        <div class="contactForm">
+            <h1>Contactanos</h1>
+            <h2 class="contatcFormH2">Escríbenos y en breve nos pondremos en contacto contigo</h2>
+            <form action="" method="post">       
+
+                <label for="nombre" class="colocar_nombre">
+                    <p>Nombre<span class="obligatorio">*</span></p>
+                    <input type="text" name="" id="nombre" placeholder="Escribe tu nombre" required>
+                </label>
+                <label for="email" class="colocar_email">
+                    <p>Email<span class="obligatorio">*</span></p> 
+                    <input type="email" name="" id="email" placeholder="Escribe tu Email" required>
+                </label>
+                <label for="telefone" class="colocar_telefono">
+                    <p>Teléfono</p>
+                    <input type="tel" name="" id="telefono" placeholder="Escribe tu teléfono">
+                </label>
+                <label for="asunto" class="colocar_asunto">
+                    <p>Asunto<span class="obligatorio">*</span></p>
+                    <input type="text" name="" id="assunto" placeholder="Escribe un asunto" required>
+                </label>
+                <label for="mensaje" class="colocar_mensaje">
+                    <p>Mensaje<span class="obligatorio">*</span></p>
+                    <textarea name="" class="texto_mensaje" id="mensaje" placeholder="Deja aquí tu comentario..." ></textarea>
+                </label>               
+                <button class="buttonSend" type="submit" name="" id="enviar"><p>Enviar</p></button>
+                <p>
+                    <span class="obligatorio"> * </span>
+                    los campos son obligatorios.
+                </p>
+            </form> 
+        </div>
+
+        <div class="imgDecoration1">
+            <img src="../assets/img/stickerCe.png" alt="sticker Cebolla">
+            <img src="../assets/img/stickerChimi.png" alt="sticker Chimichurri">
+            <img src="../assets/img/stickerEs.png" alt="sticker Escabeche">
+        </div>
+    </main>
+    <!-- PIE DE PAGINA -->
+    <footer class="contactFooter">
+        <section>
+            <h3>!Siguenos en nuestras redes sociales!</h3>
+            <div>
+                <a href="https://www.facebook.com/dkarla.funes"><img src="../assets/img/face2.png" alt="facebook dkarla"></a>
+                <a href="https://wa.me/qr/WODJUUOJJVFKE1"><img src="../assets/img/whatsapp2.png" alt="whatsapp dkarla"></a>
+                <a href="https://instagram.com/dkarlafong?igshid=YmMyMTA2M2Y="><img src="../assets/img/insta2.png" alt="instagram dkarla"></a>
+            </div>
+        </section>
+    </footer>
+
+    <!-- Script de bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+        integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+        crossorigin="anonymous"></script>
+</body>
+</html>
